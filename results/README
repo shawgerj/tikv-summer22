@@ -1,0 +1,13 @@
+Here is YCSB benchmark data generated with go-ycsb. 
+
+Experiment setup:
+3x TiKV nodes
+1x PD
+1x Client
+
+All nodes are 40-core Intel(R) Xeon(R) Silver 4114 CPU @ 2.20GHz, 192GB memory, SSD hard drive. 10Gps network.
+
+Each benchmark is run with 5 to 120 threads to evaluate throughput and latency changes. 
+
+default/ - unmodified TiKV setup. Default settings. 
+nowal/   - modified TiKV so writing key-values to RocksDB does not use a write-ahead log. Otherwise default settings. 

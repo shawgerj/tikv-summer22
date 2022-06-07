@@ -1,0 +1,11 @@
+Here is YCSB benchmark data generated with go-ycsb. 
+
+Experiment setup:
+3x TiKV nodes
+1x PD
+1x Client
+
+All nodes are 40-core 
+
+default/ 
+

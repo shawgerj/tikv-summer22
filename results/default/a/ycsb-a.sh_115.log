@@ -1,0 +1,44 @@
+[2022/06/06 12:35:31.810 -05:00] [INFO] [client.go:378] ["[pd] create pd client with endpoints"] [pd-address="[10.10.1.4:2379]"]
+[2022/06/06 12:35:31.816 -05:00] [INFO] [base_client.go:350] ["[pd] switch leader"] [new-leader=http://10.10.1.4:2379] [old-leader=]
+[2022/06/06 12:35:31.816 -05:00] [INFO] [base_client.go:105] ["[pd] init cluster id"] [cluster-id=7105848244335012427]
+[2022/06/06 12:35:31.817 -05:00] [INFO] [client.go:673] ["[pd] tso dispatcher created"] [dc-location=global]
+***************** properties *****************
+"tikv.pd"="10.10.1.4:2379"
+"verbose"="false"
+"scanproportion"="0"
+"threadcount"="115"
+"requestdistribution"="uniform"
+"tikv.type"="raw"
+"tikv.conncount"="128"
+"insertproportion"="0"
+"tikv.batchsize"="128"
+"recordcount"="1000000"
+"readallfields"="true"
+"updateproportion"="0.5"
+"debug.pprof"=":6060"
+"operationcount"="1000000"
+"dotransactions"="true"
+"workload"="core"
+"readproportion"="0.5"
+**********************************************
+READ   - Takes(s): 9.9, Count: 57358, OPS: 5766.1, Avg(us): 2372, Min(us): 645, Max(us): 100065, 99th(us): 10000, 99.9th(us): 51000, 99.99th(us): 98000
+UPDATE - Takes(s): 9.9, Count: 57009, OPS: 5739.7, Avg(us): 17723, Min(us): 5764, Max(us): 121985, 99th(us): 35000, 99.9th(us): 75000, 99.99th(us): 119000
+READ   - Takes(s): 19.9, Count: 116551, OPS: 5842.9, Avg(us): 2325, Min(us): 631, Max(us): 100065, 99th(us): 10000, 99.9th(us): 38000, 99.99th(us): 94000
+UPDATE - Takes(s): 19.9, Count: 116089, OPS: 5824.1, Avg(us): 17432, Min(us): 4395, Max(us): 121985, 99th(us): 35000, 99.9th(us): 71000, 99.99th(us): 119000
+READ   - Takes(s): 29.9, Count: 174756, OPS: 5835.4, Avg(us): 2305, Min(us): 631, Max(us): 100065, 99th(us): 9000, 99.9th(us): 26000, 99.99th(us): 93000
+UPDATE - Takes(s): 29.9, Count: 174328, OPS: 5824.0, Avg(us): 17438, Min(us): 4395, Max(us): 121985, 99th(us): 35000, 99.9th(us): 71000, 99.99th(us): 116000
+READ   - Takes(s): 39.9, Count: 229542, OPS: 5746.1, Avg(us): 2303, Min(us): 611, Max(us): 100065, 99th(us): 9000, 99.9th(us): 29000, 99.99th(us): 93000
+UPDATE - Takes(s): 39.9, Count: 228734, OPS: 5728.0, Avg(us): 17760, Min(us): 4395, Max(us): 121985, 99th(us): 36000, 99.9th(us): 71000, 99.99th(us): 116000
+READ   - Takes(s): 49.9, Count: 283565, OPS: 5677.3, Avg(us): 2286, Min(us): 597, Max(us): 100065, 99th(us): 9000, 99.9th(us): 29000, 99.99th(us): 91000
+UPDATE - Takes(s): 49.9, Count: 282742, OPS: 5662.5, Avg(us): 18005, Min(us): 4395, Max(us): 121985, 99th(us): 38000, 99.9th(us): 72000, 99.99th(us): 111000
+READ   - Takes(s): 59.9, Count: 338250, OPS: 5642.4, Avg(us): 2279, Min(us): 597, Max(us): 100065, 99th(us): 9000, 99.9th(us): 28000, 99.99th(us): 91000
+UPDATE - Takes(s): 59.9, Count: 337507, OPS: 5631.5, Avg(us): 18122, Min(us): 4395, Max(us): 121985, 99th(us): 38000, 99.9th(us): 73000, 99.99th(us): 104000
+READ   - Takes(s): 69.9, Count: 397016, OPS: 5675.9, Avg(us): 2264, Min(us): 594, Max(us): 100065, 99th(us): 9000, 99.9th(us): 26000, 99.99th(us): 79000
+UPDATE - Takes(s): 69.9, Count: 396062, OPS: 5663.5, Avg(us): 18019, Min(us): 4395, Max(us): 121985, 99th(us): 38000, 99.9th(us): 74000, 99.99th(us): 101000
+READ   - Takes(s): 79.9, Count: 455663, OPS: 5699.5, Avg(us): 2258, Min(us): 589, Max(us): 100065, 99th(us): 9000, 99.9th(us): 27000, 99.99th(us): 74000
+UPDATE - Takes(s): 79.9, Count: 455283, OPS: 5695.9, Avg(us): 17911, Min(us): 4395, Max(us): 121985, 99th(us): 37000, 99.9th(us): 73000, 99.99th(us): 97000
+Run finished, takes 1m28.734848986s
+READ   - Takes(s): 88.7, Count: 499987, OPS: 5638.0, Avg(us): 2256, Min(us): 589, Max(us): 100065, 99th(us): 9000, 99.9th(us): 27000, 99.99th(us): 69000
+UPDATE - Takes(s): 88.7, Count: 499937, OPS: 5638.4, Avg(us): 17847, Min(us): 4395, Max(us): 121985, 99th(us): 37000, 99.9th(us): 73000, 99.99th(us): 96000
+[2022/06/06 12:37:00.553 -05:00] [INFO] [client.go:754] ["[pd] stop fetching the pending tso requests due to context canceled"] [dc-location=global]
+[2022/06/06 12:37:00.554 -05:00] [INFO] [client.go:692] ["[pd] exit tso dispatcher"] [dc-location=global]
