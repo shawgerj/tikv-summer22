@@ -1,0 +1,44 @@
+[2022/06/07 14:47:47.929 -05:00] [INFO] [client.go:378] ["[pd] create pd client with endpoints"] [pd-address="[10.10.1.4:2379]"]
+[2022/06/07 14:47:47.935 -05:00] [INFO] [base_client.go:350] ["[pd] switch leader"] [new-leader=http://10.10.1.4:2379] [old-leader=]
+[2022/06/07 14:47:47.935 -05:00] [INFO] [base_client.go:105] ["[pd] init cluster id"] [cluster-id=7106566731107235629]
+[2022/06/07 14:47:47.937 -05:00] [INFO] [client.go:673] ["[pd] tso dispatcher created"] [dc-location=global]
+***************** properties *****************
+"debug.pprof"=":6060"
+"dotransactions"="true"
+"recordcount"="1000000"
+"readproportion"="0.5"
+"tikv.type"="raw"
+"tikv.conncount"="128"
+"tikv.pd"="10.10.1.4:2379"
+"requestdistribution"="uniform"
+"readallfields"="true"
+"threadcount"="115"
+"workload"="core"
+"operationcount"="1000000"
+"tikv.batchsize"="128"
+"scanproportion"="0"
+"updateproportion"="0.5"
+"insertproportion"="0"
+"verbose"="false"
+**********************************************
+READ   - Takes(s): 10.0, Count: 60322, OPS: 6062.1, Avg(us): 2318, Min(us): 621, Max(us): 104760, 99th(us): 9000, 99.9th(us): 49000, 99.99th(us): 97000
+UPDATE - Takes(s): 9.9, Count: 60564, OPS: 6100.3, Avg(us): 16633, Min(us): 5260, Max(us): 154291, 99th(us): 41000, 99.9th(us): 115000, 99.99th(us): 148000
+READ   - Takes(s): 20.0, Count: 121664, OPS: 6098.2, Avg(us): 2242, Min(us): 556, Max(us): 104760, 99th(us): 9000, 99.9th(us): 32000, 99.99th(us): 97000
+UPDATE - Takes(s): 19.9, Count: 122119, OPS: 6128.0, Avg(us): 16558, Min(us): 5260, Max(us): 154291, 99th(us): 37000, 99.9th(us): 70000, 99.99th(us): 147000
+READ   - Takes(s): 30.0, Count: 180879, OPS: 6039.2, Avg(us): 2204, Min(us): 556, Max(us): 104760, 99th(us): 9000, 99.9th(us): 27000, 99.99th(us): 97000
+UPDATE - Takes(s): 29.9, Count: 181333, OPS: 6059.0, Avg(us): 16788, Min(us): 4701, Max(us): 154291, 99th(us): 39000, 99.9th(us): 68000, 99.99th(us): 135000
+READ   - Takes(s): 40.0, Count: 244155, OPS: 6111.4, Avg(us): 2214, Min(us): 556, Max(us): 104760, 99th(us): 9000, 99.9th(us): 27000, 99.99th(us): 97000
+UPDATE - Takes(s): 39.9, Count: 244592, OPS: 6125.8, Avg(us): 16559, Min(us): 4701, Max(us): 154291, 99th(us): 37000, 99.9th(us): 65000, 99.99th(us): 125000
+READ   - Takes(s): 50.0, Count: 305488, OPS: 6115.8, Avg(us): 2223, Min(us): 556, Max(us): 104760, 99th(us): 9000, 99.9th(us): 28000, 99.99th(us): 96000
+UPDATE - Takes(s): 49.9, Count: 305940, OPS: 6127.6, Avg(us): 16538, Min(us): 4701, Max(us): 271370, 99th(us): 37000, 99.9th(us): 74000, 99.99th(us): 234000
+READ   - Takes(s): 60.0, Count: 371971, OPS: 6204.6, Avg(us): 2220, Min(us): 556, Max(us): 104760, 99th(us): 9000, 99.9th(us): 27000, 99.99th(us): 87000
+UPDATE - Takes(s): 59.9, Count: 372202, OPS: 6210.8, Avg(us): 16281, Min(us): 4701, Max(us): 271370, 99th(us): 36000, 99.9th(us): 71000, 99.99th(us): 232000
+READ   - Takes(s): 70.0, Count: 436400, OPS: 6238.7, Avg(us): 2211, Min(us): 556, Max(us): 104760, 99th(us): 9000, 99.9th(us): 26000, 99.99th(us): 76000
+UPDATE - Takes(s): 69.9, Count: 437085, OPS: 6250.5, Avg(us): 16175, Min(us): 4543, Max(us): 271370, 99th(us): 37000, 99.9th(us): 71000, 99.99th(us): 228000
+READ   - Takes(s): 80.0, Count: 498197, OPS: 6231.3, Avg(us): 2206, Min(us): 556, Max(us): 104760, 99th(us): 9000, 99.9th(us): 26000, 99.99th(us): 75000
+UPDATE - Takes(s): 79.9, Count: 498936, OPS: 6242.3, Avg(us): 16096, Min(us): 4543, Max(us): 271370, 99th(us): 36000, 99.9th(us): 72000, 99.99th(us): 219000
+Run finished, takes 1m21.144392502s
+READ   - Takes(s): 81.1, Count: 499567, OPS: 6160.3, Avg(us): 2206, Min(us): 556, Max(us): 104760, 99th(us): 9000, 99.9th(us): 27000, 99.99th(us): 76000
+UPDATE - Takes(s): 81.1, Count: 500357, OPS: 6171.8, Avg(us): 16081, Min(us): 4543, Max(us): 271370, 99th(us): 36000, 99.9th(us): 72000, 99.99th(us): 220000
+[2022/06/07 14:49:09.083 -05:00] [INFO] [client.go:754] ["[pd] stop fetching the pending tso requests due to context canceled"] [dc-location=global]
+[2022/06/07 14:49:09.083 -05:00] [INFO] [client.go:692] ["[pd] exit tso dispatcher"] [dc-location=global]
