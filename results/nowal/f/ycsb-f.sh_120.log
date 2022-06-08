@@ -1,0 +1,57 @@
+[2022/06/08 11:18:16.395 -05:00] [INFO] [client.go:378] ["[pd] create pd client with endpoints"] [pd-address="[10.10.1.4:2379]"]
+[2022/06/08 11:18:16.400 -05:00] [INFO] [base_client.go:350] ["[pd] switch leader"] [new-leader=http://10.10.1.4:2379] [old-leader=]
+[2022/06/08 11:18:16.400 -05:00] [INFO] [base_client.go:105] ["[pd] init cluster id"] [cluster-id=7106870844986743687]
+[2022/06/08 11:18:16.400 -05:00] [INFO] [client.go:673] ["[pd] tso dispatcher created"] [dc-location=global]
+***************** properties *****************
+"operationcount"="1000000"
+"threadcount"="120"
+"readallfields"="true"
+"readproportion"="0.5"
+"readmodifywriteproportion"="0.5"
+"tikv.conncount"="128"
+"workload"="core"
+"dotransactions"="true"
+"requestdistribution"="uniform"
+"tikv.batchsize"="128"
+"debug.pprof"=":6060"
+"recordcount"="1000000"
+"insertproportion"="0"
+"scanproportion"="0"
+"tikv.type"="raw"
+"verbose"="false"
+"tikv.pd"="10.10.1.4:2379"
+"updateproportion"="0"
+**********************************************
+READ   - Takes(s): 10.0, Count: 101308, OPS: 10176.7, Avg(us): 2679, Min(us): 584, Max(us): 102830, 99th(us): 11000, 99.9th(us): 67000, 99.99th(us): 101000
+READ_MODIFY_WRITE - Takes(s): 9.9, Count: 50712, OPS: 5126.0, Avg(us): 20954, Min(us): 6323, Max(us): 140596, 99th(us): 44000, 99.9th(us): 117000, 99.99th(us): 138000
+UPDATE - Takes(s): 9.9, Count: 50712, OPS: 5125.7, Avg(us): 18245, Min(us): 4881, Max(us): 129389, 99th(us): 38000, 99.9th(us): 89000, 99.99th(us): 113000
+READ   - Takes(s): 20.0, Count: 204762, OPS: 10261.3, Avg(us): 2599, Min(us): 584, Max(us): 102830, 99th(us): 11000, 99.9th(us): 51000, 99.99th(us): 100000
+READ_MODIFY_WRITE - Takes(s): 19.9, Count: 102397, OPS: 5147.4, Avg(us): 20809, Min(us): 6323, Max(us): 140596, 99th(us): 44000, 99.9th(us): 104000, 99.99th(us): 137000
+UPDATE - Takes(s): 19.9, Count: 102397, OPS: 5147.3, Avg(us): 18188, Min(us): 4881, Max(us): 129389, 99th(us): 39000, 99.9th(us): 77000, 99.99th(us): 109000
+READ   - Takes(s): 30.0, Count: 307749, OPS: 10273.9, Avg(us): 2581, Min(us): 584, Max(us): 102830, 99th(us): 11000, 99.9th(us): 48000, 99.99th(us): 99000
+READ_MODIFY_WRITE - Takes(s): 29.9, Count: 153834, OPS: 5146.2, Avg(us): 20795, Min(us): 6035, Max(us): 140596, 99th(us): 46000, 99.9th(us): 98000, 99.99th(us): 135000
+UPDATE - Takes(s): 29.9, Count: 153834, OPS: 5146.1, Avg(us): 18188, Min(us): 4881, Max(us): 129389, 99th(us): 41000, 99.9th(us): 78000, 99.99th(us): 108000
+READ   - Takes(s): 40.0, Count: 417885, OPS: 10459.0, Avg(us): 2570, Min(us): 575, Max(us): 102830, 99th(us): 12000, 99.9th(us): 46000, 99.99th(us): 97000
+READ_MODIFY_WRITE - Takes(s): 39.9, Count: 208770, OPS: 5233.3, Avg(us): 20395, Min(us): 6035, Max(us): 140596, 99th(us): 44000, 99.9th(us): 92000, 99.99th(us): 130000
+UPDATE - Takes(s): 39.9, Count: 208781, OPS: 5233.5, Avg(us): 17802, Min(us): 4881, Max(us): 129389, 99th(us): 39000, 99.9th(us): 77000, 99.99th(us): 106000
+READ   - Takes(s): 50.0, Count: 524601, OPS: 10501.5, Avg(us): 2578, Min(us): 571, Max(us): 102830, 99th(us): 12000, 99.9th(us): 43000, 99.99th(us): 94000
+READ_MODIFY_WRITE - Takes(s): 49.9, Count: 262254, OPS: 5256.3, Avg(us): 20280, Min(us): 5633, Max(us): 147783, 99th(us): 46000, 99.9th(us): 99000, 99.99th(us): 138000
+UPDATE - Takes(s): 49.9, Count: 262254, OPS: 5256.3, Avg(us): 17676, Min(us): 4439, Max(us): 140823, 99th(us): 40000, 99.9th(us): 86000, 99.99th(us): 128000
+READ   - Takes(s): 60.0, Count: 634033, OPS: 10575.2, Avg(us): 2593, Min(us): 571, Max(us): 102830, 99th(us): 12000, 99.9th(us): 43000, 99.99th(us): 92000
+READ_MODIFY_WRITE - Takes(s): 59.9, Count: 316585, OPS: 5285.8, Avg(us): 20124, Min(us): 5633, Max(us): 147783, 99th(us): 46000, 99.9th(us): 97000, 99.99th(us): 137000
+UPDATE - Takes(s): 59.9, Count: 316586, OPS: 5285.8, Avg(us): 17505, Min(us): 4439, Max(us): 140823, 99th(us): 39000, 99.9th(us): 84000, 99.99th(us): 123000
+READ   - Takes(s): 70.0, Count: 741623, OPS: 10601.5, Avg(us): 2590, Min(us): 571, Max(us): 102830, 99th(us): 12000, 99.9th(us): 41000, 99.99th(us): 91000
+READ_MODIFY_WRITE - Takes(s): 69.9, Count: 370198, OPS: 5296.6, Avg(us): 20075, Min(us): 5601, Max(us): 147783, 99th(us): 45000, 99.9th(us): 96000, 99.99th(us): 135000
+UPDATE - Takes(s): 69.9, Count: 370199, OPS: 5296.6, Avg(us): 17460, Min(us): 4439, Max(us): 140823, 99th(us): 39000, 99.9th(us): 84000, 99.99th(us): 121000
+READ   - Takes(s): 80.0, Count: 852262, OPS: 10659.3, Avg(us): 2591, Min(us): 571, Max(us): 102830, 99th(us): 12000, 99.9th(us): 40000, 99.99th(us): 90000
+READ_MODIFY_WRITE - Takes(s): 79.9, Count: 425292, OPS: 5323.3, Avg(us): 19953, Min(us): 5601, Max(us): 147783, 99th(us): 45000, 99.9th(us): 94000, 99.99th(us): 135000
+UPDATE - Takes(s): 79.9, Count: 425292, OPS: 5323.3, Avg(us): 17338, Min(us): 4439, Max(us): 140823, 99th(us): 38000, 99.9th(us): 81000, 99.99th(us): 119000
+READ   - Takes(s): 90.0, Count: 958697, OPS: 10657.6, Avg(us): 2591, Min(us): 571, Max(us): 102830, 99th(us): 12000, 99.9th(us): 40000, 99.99th(us): 90000
+READ_MODIFY_WRITE - Takes(s): 89.9, Count: 478136, OPS: 5318.9, Avg(us): 19965, Min(us): 5601, Max(us): 147783, 99th(us): 45000, 99.9th(us): 93000, 99.99th(us): 134000
+UPDATE - Takes(s): 89.9, Count: 478138, OPS: 5318.9, Avg(us): 17350, Min(us): 4439, Max(us): 140823, 99th(us): 39000, 99.9th(us): 81000, 99.99th(us): 118000
+Run finished, takes 1m35.929327117s
+READ   - Takes(s): 95.9, Count: 999959, OPS: 10428.9, Avg(us): 2584, Min(us): 571, Max(us): 102830, 99th(us): 12000, 99.9th(us): 40000, 99.99th(us): 91000
+READ_MODIFY_WRITE - Takes(s): 95.8, Count: 498819, OPS: 5205.7, Avg(us): 19923, Min(us): 5601, Max(us): 147783, 99th(us): 45000, 99.9th(us): 93000, 99.99th(us): 134000
+UPDATE - Takes(s): 95.8, Count: 498819, OPS: 5205.7, Avg(us): 17316, Min(us): 4439, Max(us): 140823, 99th(us): 39000, 99.9th(us): 81000, 99.99th(us): 118000
+[2022/06/08 11:19:52.331 -05:00] [INFO] [client.go:754] ["[pd] stop fetching the pending tso requests due to context canceled"] [dc-location=global]
+[2022/06/08 11:19:52.331 -05:00] [INFO] [client.go:692] ["[pd] exit tso dispatcher"] [dc-location=global]
