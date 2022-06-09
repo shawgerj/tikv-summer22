@@ -1,40 +1,38 @@
-[2022/06/07 15:23:21.682 -05:00] [INFO] [client.go:378] ["[pd] create pd client with endpoints"] [pd-address="[10.10.1.4:2379]"]
-[2022/06/07 15:23:21.690 -05:00] [INFO] [base_client.go:350] ["[pd] switch leader"] [new-leader=http://10.10.1.4:2379] [old-leader=]
-[2022/06/07 15:23:21.690 -05:00] [INFO] [base_client.go:105] ["[pd] init cluster id"] [cluster-id=7106566731107235629]
-[2022/06/07 15:23:21.690 -05:00] [INFO] [client.go:673] ["[pd] tso dispatcher created"] [dc-location=global]
+[2022/06/08 22:09:23.546 -05:00] [INFO] [client.go:378] ["[pd] create pd client with endpoints"] [pd-address="[10.10.1.4:2379]"]
+[2022/06/08 22:09:23.554 -05:00] [INFO] [base_client.go:350] ["[pd] switch leader"] [new-leader=http://10.10.1.4:2379] [old-leader=]
+[2022/06/08 22:09:23.554 -05:00] [INFO] [base_client.go:105] ["[pd] init cluster id"] [cluster-id=7107062843429175921]
+[2022/06/08 22:09:23.554 -05:00] [INFO] [client.go:673] ["[pd] tso dispatcher created"] [dc-location=global]
 ***************** properties *****************
-"tikv.type"="raw"
-"workload"="core"
+"scanproportion"="0"
+"debug.pprof"=":6060"
+"updateproportion"="0.05"
+"tikv.pd"="10.10.1.4:2379"
+"operationcount"="1000000"
+"verbose"="false"
+"readproportion"="0.95"
 "recordcount"="1000000"
+"tikv.type"="raw"
+"tikv.conncount"="128"
+"workload"="core"
+"requestdistribution"="uniform"
+"tikv.batchsize"="128"
+"dotransactions"="true"
+"insertproportion"="0"
 "readallfields"="true"
 "threadcount"="100"
-"insertproportion"="0"
-"dotransactions"="true"
-"readproportion"="0.95"
-"requestdistribution"="uniform"
-"operationcount"="1000000"
-"updateproportion"="0.05"
-"verbose"="false"
-"scanproportion"="0"
-"tikv.pd"="10.10.1.4:2379"
-"tikv.conncount"="128"
-"debug.pprof"=":6060"
-"tikv.batchsize"="128"
 **********************************************
-READ   - Takes(s): 10.0, Count: 144867, OPS: 14554.5, Avg(us): 5728, Min(us): 730, Max(us): 108539, 99th(us): 33000, 99.9th(us): 62000, 99.99th(us): 106000
-UPDATE - Takes(s): 9.9, Count: 7622, OPS: 767.5, Avg(us): 21935, Min(us): 4749, Max(us): 122589, 99th(us): 68000, 99.9th(us): 87000, 99.99th(us): 123000
-READ   - Takes(s): 20.0, Count: 289302, OPS: 14498.9, Avg(us): 5733, Min(us): 722, Max(us): 108539, 99th(us): 33000, 99.9th(us): 58000, 99.99th(us): 99000
-UPDATE - Takes(s): 19.9, Count: 15295, OPS: 767.4, Avg(us): 22008, Min(us): 4749, Max(us): 122589, 99th(us): 68000, 99.9th(us): 90000, 99.99th(us): 117000
-READ   - Takes(s): 30.0, Count: 433171, OPS: 14461.5, Avg(us): 5748, Min(us): 722, Max(us): 122983, 99th(us): 33000, 99.9th(us): 57000, 99.99th(us): 104000
-UPDATE - Takes(s): 29.9, Count: 22861, OPS: 763.8, Avg(us): 22038, Min(us): 4749, Max(us): 128484, 99th(us): 67000, 99.9th(us): 93000, 99.99th(us): 123000
-READ   - Takes(s): 40.0, Count: 578083, OPS: 14469.0, Avg(us): 5745, Min(us): 722, Max(us): 122983, 99th(us): 33000, 99.9th(us): 55000, 99.99th(us): 99000
-UPDATE - Takes(s): 39.9, Count: 30422, OPS: 761.9, Avg(us): 22052, Min(us): 4749, Max(us): 128484, 99th(us): 67000, 99.9th(us): 93000, 99.99th(us): 123000
-READ   - Takes(s): 50.0, Count: 722776, OPS: 14469.0, Avg(us): 5741, Min(us): 722, Max(us): 122983, 99th(us): 33000, 99.9th(us): 55000, 99.99th(us): 98000
-UPDATE - Takes(s): 49.9, Count: 38103, OPS: 763.1, Avg(us): 22069, Min(us): 4749, Max(us): 129951, 99th(us): 67000, 99.9th(us): 92000, 99.99th(us): 123000
-READ   - Takes(s): 60.0, Count: 866629, OPS: 14455.0, Avg(us): 5747, Min(us): 722, Max(us): 122983, 99th(us): 33000, 99.9th(us): 54000, 99.99th(us): 96000
-UPDATE - Takes(s): 59.9, Count: 45644, OPS: 761.6, Avg(us): 22086, Min(us): 4749, Max(us): 129951, 99th(us): 67000, 99.9th(us): 92000, 99.99th(us): 123000
-Run finished, takes 1m6.104540099s
-READ   - Takes(s): 66.1, Count: 949883, OPS: 14379.6, Avg(us): 5707, Min(us): 683, Max(us): 122983, 99th(us): 32000, 99.9th(us): 52000, 99.99th(us): 97000
-UPDATE - Takes(s): 66.0, Count: 50114, OPS: 758.9, Avg(us): 22039, Min(us): 4749, Max(us): 129951, 99th(us): 67000, 99.9th(us): 91000, 99.99th(us): 123000
-[2022/06/07 15:24:27.796 -05:00] [INFO] [client.go:754] ["[pd] stop fetching the pending tso requests due to context canceled"] [dc-location=global]
-[2022/06/07 15:24:27.796 -05:00] [INFO] [client.go:692] ["[pd] exit tso dispatcher"] [dc-location=global]
+READ   - Takes(s): 10.0, Count: 162609, OPS: 16318.7, Avg(us): 4992, Min(us): 694, Max(us): 109151, 99th(us): 26000, 99.9th(us): 58000, 99.99th(us): 97000
+UPDATE - Takes(s): 9.9, Count: 8554, OPS: 860.8, Avg(us): 21668, Min(us): 4954, Max(us): 116143, 99th(us): 62000, 99.9th(us): 86000, 99.99th(us): 101000
+READ   - Takes(s): 20.0, Count: 327842, OPS: 16425.3, Avg(us): 4949, Min(us): 694, Max(us): 109151, 99th(us): 26000, 99.9th(us): 52000, 99.99th(us): 97000
+UPDATE - Takes(s): 19.9, Count: 17117, OPS: 858.9, Avg(us): 21787, Min(us): 4954, Max(us): 116143, 99th(us): 61000, 99.9th(us): 89000, 99.99th(us): 115000
+READ   - Takes(s): 30.0, Count: 492445, OPS: 16430.4, Avg(us): 4926, Min(us): 684, Max(us): 109151, 99th(us): 25000, 99.9th(us): 47000, 99.99th(us): 91000
+UPDATE - Takes(s): 29.9, Count: 25887, OPS: 864.6, Avg(us): 21973, Min(us): 4954, Max(us): 116143, 99th(us): 60000, 99.9th(us): 87000, 99.99th(us): 109000
+READ   - Takes(s): 40.0, Count: 655311, OPS: 16399.4, Avg(us): 4934, Min(us): 684, Max(us): 109151, 99th(us): 25000, 99.9th(us): 48000, 99.99th(us): 94000
+UPDATE - Takes(s): 39.9, Count: 34632, OPS: 867.3, Avg(us): 21899, Min(us): 4954, Max(us): 116143, 99th(us): 59000, 99.9th(us): 88000, 99.99th(us): 110000
+READ   - Takes(s): 50.0, Count: 818722, OPS: 16387.7, Avg(us): 4938, Min(us): 672, Max(us): 109151, 99th(us): 26000, 99.9th(us): 47000, 99.99th(us): 93000
+UPDATE - Takes(s): 49.9, Count: 43185, OPS: 864.9, Avg(us): 21935, Min(us): 4954, Max(us): 140472, 99th(us): 61000, 99.9th(us): 91000, 99.99th(us): 110000
+Run finished, takes 58.344179691s
+READ   - Takes(s): 58.3, Count: 949944, OPS: 16293.2, Avg(us): 4910, Min(us): 672, Max(us): 109151, 99th(us): 25000, 99.9th(us): 45000, 99.99th(us): 92000
+UPDATE - Takes(s): 58.3, Count: 50055, OPS: 859.0, Avg(us): 21776, Min(us): 4954, Max(us): 140472, 99th(us): 60000, 99.9th(us): 89000, 99.99th(us): 109000
+[2022/06/08 22:10:21.899 -05:00] [INFO] [client.go:754] ["[pd] stop fetching the pending tso requests due to context canceled"] [dc-location=global]
+[2022/06/08 22:10:21.899 -05:00] [INFO] [client.go:692] ["[pd] exit tso dispatcher"] [dc-location=global]
