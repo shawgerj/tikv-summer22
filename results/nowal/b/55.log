@@ -1,0 +1,2 @@
+READ   - Takes(s): 63.3, Count: 950023, OPS: 14997.0, Avg(us): 2905, Min(us): 652, Max(us): 104788, 99th(us): 12000, 99.9th(us): 22000, 99.99th(us): 84000
+UPDATE - Takes(s): 63.3, Count: 49932, OPS: 788.9, Avg(us): 13406, Min(us): 5190, Max(us): 116059, 99th(us): 29000, 99.9th(us): 79000, 99.99th(us): 106000

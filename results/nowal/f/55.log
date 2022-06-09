@@ -1,0 +1,3 @@
+READ   - Takes(s): 147.0, Count: 999955, OPS: 6801.7, Avg(us): 1881, Min(us): 632, Max(us): 98791, 99th(us): 6000, 99.9th(us): 11000, 99.99th(us): 61000
+READ_MODIFY_WRITE - Takes(s): 147.0, Count: 499539, OPS: 3399.2, Avg(us): 14046, Min(us): 5277, Max(us): 169350, 99th(us): 29000, 99.9th(us): 68000, 99.99th(us): 114000
+UPDATE - Takes(s): 147.0, Count: 499539, OPS: 3399.2, Avg(us): 12141, Min(us): 3921, Max(us): 167571, 99th(us): 27000, 99.9th(us): 61000, 99.99th(us): 103000
