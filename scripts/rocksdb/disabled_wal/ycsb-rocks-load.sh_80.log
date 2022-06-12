@@ -1,0 +1,22 @@
+***************** properties *****************
+"updateproportion"="0.5"
+"rocksdb.write_buffer_size"="2097152"
+"rocksdb.disable_wal"="true"
+"threadcount"="80"
+"recordcount"="1000000"
+"insertproportion"="0"
+"rocksdb.dir"="/mydata/local"
+"operationcount"="1000000"
+"rocksdb.bytes_per_sync"="1048576"
+"scanproportion"="0"
+"workload"="core"
+"requestdistribution"="uniform"
+"readallfields"="true"
+"readproportion"="0.5"
+"rocksdb.wal_bytes_per_sync"="524288"
+"dotransactions"="false"
+**********************************************
+INSERT - Takes(s): 10.0, Count: 432191, OPS: 43166.9, Avg(us): 1582, Min(us): 5, Max(us): 107312, 99th(us): 18000, 99.9th(us): 39000, 99.99th(us): 48000
+INSERT - Takes(s): 20.0, Count: 820470, OPS: 41017.3, Avg(us): 1685, Min(us): 5, Max(us): 113147, 99th(us): 22000, 99.9th(us): 50000, 99.99th(us): 79000
+Run finished, takes 24.658572399s
+INSERT - Takes(s): 24.7, Count: 999998, OPS: 40554.5, Avg(us): 1697, Min(us): 5, Max(us): 113147, 99th(us): 22000, 99.9th(us): 51000, 99.99th(us): 85000
