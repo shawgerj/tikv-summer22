@@ -1,0 +1,41 @@
+[2022/06/14 10:49:11.173 -05:00] [INFO] [client.go:378] ["[pd] create pd client with endpoints"] [pd-address="[10.10.1.4:2379]"]
+[2022/06/14 10:49:11.182 -05:00] [INFO] [base_client.go:350] ["[pd] switch leader"] [new-leader=http://10.10.1.4:2379] [old-leader=]
+[2022/06/14 10:49:11.182 -05:00] [INFO] [base_client.go:105] ["[pd] init cluster id"] [cluster-id=7109123147210125828]
+[2022/06/14 10:49:11.182 -05:00] [INFO] [client.go:673] ["[pd] tso dispatcher created"] [dc-location=global]
+***************** properties *****************
+"workload"="core"
+"tikv.conncount"="128"
+"requestdistribution"="uniform"
+"dropdata"="false"
+"verbose"="false"
+"operationcount"="1000000"
+"recordcount"="1000000"
+"tikv.type"="raw"
+"readproportion"="0.5"
+"dotransactions"="false"
+"updateproportion"="0.5"
+"tikv.batchsize"="128"
+"readallfields"="true"
+"tikv.pd"="10.10.1.4:2379"
+"threadcount"="140"
+"scanproportion"="0"
+"debug.pprof"=":6060"
+"insertproportion"="0"
+**********************************************
+INSERT - Takes(s): 9.9, Count: 76701, OPS: 7753.4, Avg(us): 18155, Min(us): 8314, Max(us): 119806, 99th(us): 33000, 99.9th(us): 107000, 99.99th(us): 117000
+INSERT - Takes(s): 19.9, Count: 155431, OPS: 7814.1, Avg(us): 17925, Min(us): 8314, Max(us): 119806, 99th(us): 38000, 99.9th(us): 56000, 99.99th(us): 115000
+INSERT - Takes(s): 29.9, Count: 232602, OPS: 7781.7, Avg(us): 17972, Min(us): 7622, Max(us): 119806, 99th(us): 39000, 99.9th(us): 56000, 99.99th(us): 115000
+INSERT - Takes(s): 39.9, Count: 309725, OPS: 7764.1, Avg(us): 17997, Min(us): 7622, Max(us): 119806, 99th(us): 40000, 99.9th(us): 60000, 99.99th(us): 114000
+INSERT - Takes(s): 49.9, Count: 387153, OPS: 7760.0, Avg(us): 18000, Min(us): 7622, Max(us): 119806, 99th(us): 40000, 99.9th(us): 69000, 99.99th(us): 112000
+INSERT - Takes(s): 59.9, Count: 465483, OPS: 7772.2, Avg(us): 17961, Min(us): 7622, Max(us): 138151, 99th(us): 40000, 99.9th(us): 69000, 99.99th(us): 114000
+INSERT - Takes(s): 69.9, Count: 535248, OPS: 7658.3, Avg(us): 18228, Min(us): 7622, Max(us): 138151, 99th(us): 41000, 99.9th(us): 69000, 99.99th(us): 113000
+INSERT - Takes(s): 79.9, Count: 607658, OPS: 7606.1, Avg(us): 18352, Min(us): 7622, Max(us): 138151, 99th(us): 41000, 99.9th(us): 70000, 99.99th(us): 112000
+INSERT - Takes(s): 89.9, Count: 687056, OPS: 7643.2, Avg(us): 18260, Min(us): 7622, Max(us): 138151, 99th(us): 41000, 99.9th(us): 69000, 99.99th(us): 110000
+INSERT - Takes(s): 99.9, Count: 765905, OPS: 7667.4, Avg(us): 18199, Min(us): 7622, Max(us): 138151, 99th(us): 41000, 99.9th(us): 70000, 99.99th(us): 114000
+INSERT - Takes(s): 109.9, Count: 843825, OPS: 7678.7, Avg(us): 18172, Min(us): 7206, Max(us): 138151, 99th(us): 41000, 99.9th(us): 70000, 99.99th(us): 114000
+INSERT - Takes(s): 119.9, Count: 924226, OPS: 7708.9, Avg(us): 18099, Min(us): 7206, Max(us): 138151, 99th(us): 41000, 99.9th(us): 69000, 99.99th(us): 113000
+INSERT - Takes(s): 129.9, Count: 994663, OPS: 7657.6, Avg(us): 18219, Min(us): 7206, Max(us): 138151, 99th(us): 41000, 99.9th(us): 70000, 99.99th(us): 113000
+Run finished, takes 2m10.815874681s
+INSERT - Takes(s): 130.7, Count: 999880, OPS: 7649.9, Avg(us): 18214, Min(us): 6437, Max(us): 138151, 99th(us): 41000, 99.9th(us): 70000, 99.99th(us): 113000
+[2022/06/14 10:51:21.999 -05:00] [INFO] [client.go:754] ["[pd] stop fetching the pending tso requests due to context canceled"] [dc-location=global]
+[2022/06/14 10:51:21.999 -05:00] [INFO] [client.go:692] ["[pd] exit tso dispatcher"] [dc-location=global]

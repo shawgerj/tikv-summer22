@@ -1,0 +1,34 @@
+[2022/06/14 11:41:53.434 -05:00] [INFO] [client.go:378] ["[pd] create pd client with endpoints"] [pd-address="[10.10.1.4:2379]"]
+[2022/06/14 11:41:53.440 -05:00] [INFO] [base_client.go:350] ["[pd] switch leader"] [new-leader=http://10.10.1.4:2379] [old-leader=]
+[2022/06/14 11:41:53.440 -05:00] [INFO] [base_client.go:105] ["[pd] init cluster id"] [cluster-id=7109136722272158350]
+[2022/06/14 11:41:53.440 -05:00] [INFO] [client.go:673] ["[pd] tso dispatcher created"] [dc-location=global]
+***************** properties *****************
+"workload"="core"
+"readallfields"="true"
+"debug.pprof"=":6060"
+"tikv.pd"="10.10.1.4:2379"
+"scanproportion"="0"
+"requestdistribution"="uniform"
+"tikv.conncount"="128"
+"insertproportion"="0"
+"tikv.type"="raw"
+"threadcount"="725"
+"dotransactions"="false"
+"tikv.batchsize"="128"
+"readproportion"="0.5"
+"updateproportion"="0.5"
+"verbose"="false"
+"operationcount"="1000000"
+"dropdata"="false"
+"recordcount"="1000000"
+**********************************************
+INSERT - Takes(s): 9.8, Count: 151448, OPS: 15423.1, Avg(us): 47559, Min(us): 16076, Max(us): 221248, 99th(us): 125000, 99.9th(us): 203000, 99.99th(us): 216000
+INSERT - Takes(s): 19.8, Count: 304088, OPS: 15343.4, Avg(us): 47465, Min(us): 13341, Max(us): 221248, 99th(us): 119000, 99.9th(us): 193000, 99.99th(us): 214000
+INSERT - Takes(s): 29.8, Count: 461872, OPS: 15489.1, Avg(us): 46932, Min(us): 13341, Max(us): 241055, 99th(us): 121000, 99.9th(us): 224000, 99.99th(us): 239000
+INSERT - Takes(s): 39.8, Count: 606356, OPS: 15227.6, Avg(us): 47692, Min(us): 12631, Max(us): 241055, 99th(us): 121000, 99.9th(us): 215000, 99.99th(us): 239000
+INSERT - Takes(s): 49.8, Count: 754885, OPS: 15152.6, Avg(us): 47880, Min(us): 12631, Max(us): 241055, 99th(us): 115000, 99.9th(us): 201000, 99.99th(us): 239000
+INSERT - Takes(s): 59.8, Count: 913991, OPS: 15279.3, Avg(us): 47483, Min(us): 12631, Max(us): 241055, 99th(us): 107000, 99.9th(us): 193000, 99.99th(us): 239000
+Run finished, takes 1m6.536682906s
+INSERT - Takes(s): 66.4, Count: 999771, OPS: 15066.9, Avg(us): 47977, Min(us): 5782, Max(us): 241055, 99th(us): 113000, 99.9th(us): 192000, 99.99th(us): 238000
+[2022/06/14 11:42:59.978 -05:00] [INFO] [client.go:754] ["[pd] stop fetching the pending tso requests due to context canceled"] [dc-location=global]
+[2022/06/14 11:42:59.978 -05:00] [INFO] [client.go:692] ["[pd] exit tso dispatcher"] [dc-location=global]
