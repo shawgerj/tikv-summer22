@@ -24,6 +24,6 @@ p.line(drawable=d, table=t_tikv_nowal, xfield='threads',
                legendtext='TiKV-NoWAL')
 
 
-L.draw(canvas=c, coord=d.map([11,17000]), down=True, width=15, height=15)
+L.draw(canvas=c, coord=d.map([95,3858]), down=True, width=15, height=15)
 
 c.render()

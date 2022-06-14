@@ -1,0 +1,1 @@
+INSERT - Takes(s): 28.2, Count: 1000000, OPS: 35499.0, Avg(us): 2026, Min(us): 9, Max(us): 154137, 99th(us): 16000, 99.9th(us): 44000, 99.99th(us): 124000

@@ -1,2 +1,2 @@
-READ   - Takes(s): 63.8, Count: 950005, OPS: 14899.0, Avg(us): 3791, Min(us): 707, Max(us): 102267, 99th(us): 18000, 99.9th(us): 37000, 99.99th(us): 90000
-UPDATE - Takes(s): 63.7, Count: 49945, OPS: 783.8, Avg(us): 16289, Min(us): 5152, Max(us): 129311, 99th(us): 41000, 99.9th(us): 77000, 99.99th(us): 114000
+READ   - Takes(s): 56.3, Count: 949935, OPS: 16877.5, Avg(us): 3271, Min(us): 656, Max(us): 100314, 99th(us): 14000, 99.9th(us): 24000, 99.99th(us): 91000
+UPDATE - Takes(s): 56.2, Count: 50009, OPS: 889.1, Avg(us): 15418, Min(us): 4747, Max(us): 167559, 99th(us): 35000, 99.9th(us): 79000, 99.99th(us): 118000
