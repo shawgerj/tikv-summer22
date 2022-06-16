@@ -1,22 +1,25 @@
 ***************** properties *****************
-"rocksdb.bytes_per_sync"="1048576"
-"recordcount"="1000000"
-"updateproportion"="0.5"
-"rocksdb.dir"="/mydata/local"
-"rocksdb.disable_wal"="false"
-"readproportion"="0.5"
-"scanproportion"="0"
-"workload"="core"
-"insertproportion"="0"
 "dotransactions"="false"
-"readallfields"="true"
-"requestdistribution"="uniform"
-"rocksdb.wal_bytes_per_sync"="524288"
-"rocksdb.write_buffer_size"="2097152"
+"scanproportion"="0"
+"rocksdb.bytes_per_sync"="1048576"
+"threadcount"="1"
+"insertproportion"="0"
 "operationcount"="1000000"
-"threadcount"="5"
+"rocksdb.write_buffer_size"="2097152"
+"updateproportion"="0.5"
+"readallfields"="true"
+"rocksdb.dir"="/mydata/local"
+"requestdistribution"="uniform"
+"readproportion"="0.5"
+"workload"="core"
+"recordcount"="1000000"
+"rocksdb.disable_wal"="false"
+"rocksdb.wal_bytes_per_sync"="524288"
 **********************************************
-INSERT - Takes(s): 10.0, Count: 369110, OPS: 36909.0, Avg(us): 81, Min(us): 6, Max(us): 109995, 99th(us): 1000, 99.9th(us): 6000, 99.99th(us): 57000
-INSERT - Takes(s): 20.0, Count: 731571, OPS: 36577.5, Avg(us): 81, Min(us): 6, Max(us): 134913, 99th(us): 1000, 99.9th(us): 6000, 99.99th(us): 59000
-Run finished, takes 27.546045579s
-INSERT - Takes(s): 27.5, Count: 1000000, OPS: 36303.1, Avg(us): 82, Min(us): 6, Max(us): 134913, 99th(us): 1000, 99.9th(us): 6000, 99.99th(us): 65000
+INSERT - Takes(s): 10.0, Count: 201824, OPS: 20180.8, Avg(us): 19, Min(us): 5, Max(us): 106752, 99th(us): 1000, 99.9th(us): 1000, 99.99th(us): 1000
+INSERT - Takes(s): 20.0, Count: 396074, OPS: 19803.3, Avg(us): 19, Min(us): 5, Max(us): 111947, 99th(us): 1000, 99.9th(us): 1000, 99.99th(us): 11000
+INSERT - Takes(s): 30.0, Count: 555993, OPS: 18532.8, Avg(us): 23, Min(us): 5, Max(us): 201528, 99th(us): 1000, 99.9th(us): 1000, 99.99th(us): 21000
+INSERT - Takes(s): 40.0, Count: 717752, OPS: 17943.6, Avg(us): 25, Min(us): 5, Max(us): 201528, 99th(us): 1000, 99.9th(us): 1000, 99.99th(us): 26000
+INSERT - Takes(s): 50.0, Count: 880711, OPS: 17614.0, Avg(us): 25, Min(us): 5, Max(us): 201528, 99th(us): 1000, 99.9th(us): 1000, 99.99th(us): 32000
+Run finished, takes 57.908042736s
+INSERT - Takes(s): 57.9, Count: 1000000, OPS: 17268.8, Avg(us): 27, Min(us): 5, Max(us): 235521, 99th(us): 1000, 99.9th(us): 1000, 99.99th(us): 36000
