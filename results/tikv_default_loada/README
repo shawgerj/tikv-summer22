@@ -1,0 +1,6 @@
+Improved experiment. DB size fixed at 32GB, so the number of records varies. Load
+YCSB A. 
+
+Would like to compare against svl-demo, but cloudlab is acting weird so probably 
+will have to re-run this with a new cloudlab experiment (a lot of bandwidth
+variability). 

@@ -1,0 +1,7 @@
+Experiment:
+
+Evaluate TiKV and TikV-NoWAL (with extra flushing disabled) for value sizes between
+64-512 bytes. Max performance improvement is 15%, but most runs are 8% or lower.
+
+Note this experiment is a little faulty. Value sizes change, but the size of the db
+was not fixed, so different value sizes reflect different levels of compaction.
