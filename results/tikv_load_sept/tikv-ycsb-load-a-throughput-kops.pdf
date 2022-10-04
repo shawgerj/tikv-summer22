@@ -1,0 +1,273 @@
+%PDF-1.7
+1 0 obj <</Type /Catalog /Pages 2 0 R>> endobj
+2 0 obj <</Type /Pages /Kids [3 0 R] /Count 1>> endobj
+3 0 obj <</Type /Page /MediaBox [0 0 468 360] /Parent 2 0 R /Resources 4 0 R /Contents 19 0 R>> endobj
+4 0 obj <</Font <</F1 5 0 R /F2 6 0 R /F3 7 0 R /F4 8 0 R /F5 9 0 R /F6 10 0 R /F7 11 0 R /F8 12 0 R /F9 13 0 R /F10 14 0 R /F11 15 0 R /F12 16 0 R /F13 17 0 R /F14 18 0 R >>>> endobj
+5 0 obj <</Type /Font /Subtype /Type1 /BaseFont /Courier-Bold>> endobj
+6 0 obj <</Type /Font /Subtype /Type1 /BaseFont /Courier-BoldOblique>> endobj
+7 0 obj <</Type /Font /Subtype /Type1 /BaseFont /Courier-Oblique>> endobj
+8 0 obj <</Type /Font /Subtype /Type1 /BaseFont /Courier>> endobj
+9 0 obj <</Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold>> endobj
+10 0 obj <</Type /Font /Subtype /Type1 /BaseFont /Helvetica-BoldOblique>> endobj
+11 0 obj <</Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique>> endobj
+12 0 obj <</Type /Font /Subtype /Type1 /BaseFont /Helvetica>> endobj
+13 0 obj <</Type /Font /Subtype /Type1 /BaseFont /Symbol>> endobj
+14 0 obj <</Type /Font /Subtype /Type1 /BaseFont /Times-Bold>> endobj
+15 0 obj <</Type /Font /Subtype /Type1 /BaseFont /Times-BoldItalic>> endobj
+16 0 obj <</Type /Font /Subtype /Type1 /BaseFont /Times-Italic>> endobj
+17 0 obj <</Type /Font /Subtype /Type1 /BaseFont /Times-Roman>> endobj
+18 0 obj <</Type /Font /Subtype /Type1 /BaseFont /ZapfDingbats>> endobj
+19 0 obj <</Length 1914>>
+stream
+q
+1.00 w
+42.70 43.20 m
+454.10 43.20 l
+S
+Q
+q
+1.00 w
+43.20 39.20 m
+43.20 43.20 l
+S
+Q
+q
+1.00 w
+180.00 39.20 m
+180.00 43.20 l
+S
+Q
+q
+1.00 w
+316.80 39.20 m
+316.80 43.20 l
+S
+Q
+q
+1.00 w
+453.60 39.20 m
+453.60 43.20 l
+S
+Q
+BT
+/F8 10.00 Tf
+37.64 29.00 Td
+(64) Tj
+ET
+BT
+/F8 10.00 Tf
+171.66 29.00 Td
+(128) Tj
+ET
+BT
+/F8 10.00 Tf
+308.46 29.00 Td
+(256) Tj
+ET
+BT
+/F8 10.00 Tf
+445.26 29.00 Td
+(512) Tj
+ET
+BT
+/F8 10.00 Tf
+152.52 338.70 Td
+(TiKV YCSB Load A - Throughput Kops/Sec) Tj
+ET
+BT
+/F8 10.00 Tf
+207.28 16.00 Td
+(Value Size (Bytes)) Tj
+ET
+q
+1.00 w
+43.20 42.70 m
+43.20 331.70 l
+S
+Q
+q
+1.00 w
+39.20 43.20 m
+43.20 43.20 l
+S
+Q
+q
+1.00 w
+39.20 75.20 m
+43.20 75.20 l
+S
+Q
+q
+1.00 w
+39.20 107.20 m
+43.20 107.20 l
+S
+Q
+q
+1.00 w
+39.20 139.20 m
+43.20 139.20 l
+S
+Q
+q
+1.00 w
+39.20 171.20 m
+43.20 171.20 l
+S
+Q
+q
+1.00 w
+39.20 203.20 m
+43.20 203.20 l
+S
+Q
+q
+1.00 w
+39.20 235.20 m
+43.20 235.20 l
+S
+Q
+q
+1.00 w
+39.20 267.20 m
+43.20 267.20 l
+S
+Q
+q
+1.00 w
+39.20 299.20 m
+43.20 299.20 l
+S
+Q
+q
+1.00 w
+39.20 331.20 m
+43.20 331.20 l
+S
+Q
+BT
+/F8 10.00 Tf
+30.64 39.60 Td
+(0) Tj
+ET
+BT
+/F8 10.00 Tf
+30.64 71.60 Td
+(5) Tj
+ET
+BT
+/F8 10.00 Tf
+25.08 103.60 Td
+(10) Tj
+ET
+BT
+/F8 10.00 Tf
+25.08 135.60 Td
+(15) Tj
+ET
+BT
+/F8 10.00 Tf
+25.08 167.60 Td
+(20) Tj
+ET
+BT
+/F8 10.00 Tf
+25.08 199.60 Td
+(25) Tj
+ET
+BT
+/F8 10.00 Tf
+25.08 231.60 Td
+(30) Tj
+ET
+BT
+/F8 10.00 Tf
+25.08 263.60 Td
+(35) Tj
+ET
+BT
+/F8 10.00 Tf
+25.08 295.60 Td
+(40) Tj
+ET
+BT
+/F8 10.00 Tf
+25.08 327.60 Td
+(45) Tj
+ET
+BT
+/F8 10.00 Tf
+0.00 1.00 -1.00 0.00 22.08 133.56 Tm
+(Throughput (Kops / sec)) Tj
+ET
+q
+1.00 0.00 0.00  RG
+1.00 w
+43.20 312.28 m
+180.00 266.48 l
+316.80 204.36 l
+453.60 134.28 l
+S
+Q
+q
+0.00 0.00 1.00  RG
+1.00 w
+43.20 321.25 m
+180.00 284.70 l
+316.80 233.11 l
+453.60 136.84 l
+S
+Q
+q
+1.00 0.00 0.00  RG
+1.00 w
+60.89 139.20 m
+75.89 139.20 l
+S
+Q
+BT
+/F8 10.00 Tf
+79.89 135.60 Td
+(TiKV) Tj
+ET
+q
+0.00 0.00 1.00  RG
+1.00 w
+60.89 121.20 m
+75.89 121.20 l
+S
+Q
+BT
+/F8 10.00 Tf
+79.89 117.60 Td
+(TiKV-NoWAL) Tj
+ET
+endstream
+endobj
+xref
+0 20
+0000000000 65535 f
+0000000009 00000 n
+0000000056 00000 n
+0000000111 00000 n
+0000000214 00000 n
+0000000398 00000 n
+0000000469 00000 n
+0000000547 00000 n
+0000000621 00000 n
+0000000687 00000 n
+0000000760 00000 n
+0000000841 00000 n
+0000000918 00000 n
+0000000987 00000 n
+0000001053 00000 n
+0000001123 00000 n
+0000001199 00000 n
+0000001271 00000 n
+0000001342 00000 n
+0000001414 00000 n
+0000003378 00000 n
+trailer <</Size 20/Root 1 0 R>>
+startxref
+3829
+%%EOF

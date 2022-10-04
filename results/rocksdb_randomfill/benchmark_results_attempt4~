@@ -1,0 +1,16 @@
+./db_bench --benchmarks=fillrandom --use_existing_db=0 --disable_auto_compactions=0 --sync=0 --db=/mydata --wal_dir=/mydata --num=30000000 --num_levels=6 --key_size=20 --value_size=64 --block_size=65536 --cache_size=17179869184 --cache_numshardbits=6 --compression_max_dict_bytes=0 --compression_ratio=0.5 --compression_type=zstd --level_compaction_dynamic_level_bytes=true --bytes_per_sync=1048576 --wal_bytes_per_sync=524288 \ --cache_index_and_filter_blocks=0 --pin_l0_filter_and_index_blocks_in_cache=1 --benchmark_write_rate_limit=0 --hard_rate_limit=3 --rate_limit_delay_max_milliseconds=1000000 --write_buffer_size=67108864 --target_file_size_base=67108864 --max_bytes_for_level_base=536870912 --verify_checksum=1 --delete_obsolete_files_period_micros=62914560 --max_bytes_for_level_multiplier=8 --statistics=0 --stats_per_interval=1 --stats_interval_seconds=60 --histogram=1 --memtablerep=skip_list --bloom_bits=10 --open_files=-1 --compaction_readahead_size=2097152 \ --new_table_reader_for_compaction_inputs=true --max_background_compactions=4 --max_write_buffer_number=3 --allow_concurrent_memtable_write=false --max_background_flushes=4 --level0_file_num_compaction_trigger=8 --level0_slowdown_writes_trigger=20 --level0_stop_writes_trigger=40 --threads=1 --memtablerep=skip_list --allow_concurrent_memtable_write=false --disable_wal=0 --seed=1661451407 2>&1 | tee -a /tmp//benchmark_bulkload_fillrandom.log
+
+
+value_size  disable_wal throughput_ops  stall_percentage avg_write_us   throughput_mbs  p99_write_us
+64          0           247904          0                4.034          19.9            90.65
+128         0           251352          0                3.978          35.5            91.32
+256         0           215383          7.6              4.643          56.7            1125.57
+512         0           98674           52.7             10.134         50.1            1287.42
+1024        0           49821           70.2             20.072         49.6            1295.99
+2048        0           21872           82.1             45.720         43.1            2873.26
+64          1           490878          2.7              2.037          39.3            21.99
+128         1           515184          0                1.941          72.7            33.79
+256         1           209702          56.6             4.769          55.2            1281.45
+512         1           123641          75.5             8.088          62.7            1288.41
+1024        1           47464           88.8             21.069         47.3            1296.90
+2048        1           24060           92.9             41.562         47.5            1298.98

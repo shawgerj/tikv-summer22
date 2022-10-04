@@ -1,0 +1,7 @@
+#   value_size  disable_wal throughput_ops  stall_percentage avg_write_us   throughput_mbs  p99_write_us
+64          0           84250           0                7              9.63            258
+128         0           74652           0                7              13.16           271
+256         0           62852           0                7              18.27           284
+512         0           45066           0                9              24.45           342
+1024        0           26930           0.8              13             27.96           1156
+2048        0           15516           3.2              21             31.26           1192

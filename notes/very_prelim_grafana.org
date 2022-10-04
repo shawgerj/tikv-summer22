@@ -1,0 +1,55 @@
+* Grafana metrics
+** 128B values - default TiKV
+Times: 9/26/2022 9:44:00 to 10:00:00
+
+apply-write_wal_time 990us. store-write_wal_time 4.3ms. These are MAX numbers!
+
+99% apply log duration is 3.69ms. The majority of operations are in the 500us bucket.
+
+99% append log duration is more variable, but around 2.54ms. The majority of operations are in the 320-640us bucket.
+
+99% commit log duration is more variable, but around 3.51ms. The majority of operations are in the 1-2ms bucket.
+
+*** RocksDB - kv
+Write duration avg 127.5us.
+
+WAL sync 1.5 ops
+
+Write WAL duration 48.8 us
+
+WAL sync duration 3.2ms
+
+Stall is 0
+
+*** RocksDB - raft
+Write duration avg 564.8us
+
+Write WAL duration 528.2us
+
+WAL sync 185.8 ops
+
+Write WAL duration 529.1us
+
+WAL sync duration 479.8us
+
+*** go-ycsb
+Reports 29.6 million operations. 26034.6 ops. 2911us avg. latency. 6431 99th latency.
+
+** 128B values - noWAL, noflush TiKV
+Times: 9/26/2022 10:18:00 to 10:34:00
+
+rocksDB raft write operations are taking the same amount of time, but there are more ops/sec.
+
+Why is rocksDB kv write operations at zero? Where is this number being recorded? Maybe I've removed some metric handling code by accident.
+
+*** raft I/O
+append log duration, apply log duration, commit log duration. Only seeing 99% numbers and these aren't very useful. 
+
+*** RocksDB - kv
+Avg write duration about 75.2us. 
+
+*** RocksDB - raft
+Numbers very similar (as they should be)
+
+*** go-ycsb
+Reports 29.6 million operations. 28093.7 ops. 2690us avg latency. 6319 99th latency. 

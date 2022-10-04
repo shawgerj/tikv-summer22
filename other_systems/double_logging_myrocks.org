@@ -1,0 +1,55 @@
+* Introduction
+Relational databases, which classically use a B-tree based storage engine, are shifting to other storage engines, such as LSM based storage engines. Why?
+- Internet services often have very write intensive workloads (LSM advantage)
+- Simple and fixed schema
+- Systems are frequently using expensive flash storage, and storage space usage is important (is this really an advantage of LSM tree compared to B-tree?)
+
+Example: MyRocks from Facebook replaced InnoDB (traditional B-tree) with RocksDB (LSM tree).
+
+** Two layer structure
+*** RDB layer
+- Buffer pool management
+- Query optimization
+- SQL query processing
+- Transactions
+- Data recovery
+*** Storage engine layer
+- Reliably and efficiently store data in persistent storage
+- Some operations are redundant and unnecessary. E.g. logging
+
+** Double-logging problem
+A binlog is used in an RDB for crash recovery. After a crash, the binlog is replayed. The LSM tree engine has a WAL to record all KV updates. Writes to logs should be synchronous to protect data, but synchronously logging twice generates a significant amount of performance overhead in the critical path. (To my knowledge, TiKV doesn't actually require synchronous logging except for sensitive admin commands. And I'm not sure about the Raft log. Is MyRocks always synchronous?).
+
+They claim a 44.6% improvement in throughput with WAL disabled and all other default options remaining the same. Using LinkBench to generate SQL requests.
+
+*** Challenges
+- /Data persistence/: in an RDB system, the RDB layer translates transactions into groups of KV requests. When the KV layer finishes writing the group, the RDB layer marks the transaction as committed. Without a WAL, we can't assume the KV requests are persistent, even if the transaction is marked as committed.
+- /Partial persistence/: Different column families might get persisted at different times. (I think atomic flush is a solution for this).
+- /Log sequence number/: Each KV has a log sequence number, which is used for concurrency control. KVs in a batch get consecutive LSNs. Without a WAL, if the system fails, KVs will be assigned different LSNs.
+
+*** Goals
+- Effective and efficient
+- Data persistence and correctness
+- Minimal changes to existing system
+
+*** Aside: log-on-log problem
+Double-logging is not log-on-log. Log-on-log is, for example, running a log-structured file system on a flash FTL. There is a dependency between the two logs. See Jingpei Yang, Ned Plasson, Greg Gillis, Nisha Talagala, and Swaminathan Sundararaman. Don’t Stack Your Log On My Log. In Interactions of NVM/Flash with Operating Systems and Workloads (INFLOW), 2014.
+
+** Solution
+*** Solving the partial persistence problem
+I do not understand why different keys are being stored in different column families in their example.
+- /Active/: insert a flush point after each or a group of transactions. Limitations: transactions become serialized, limiting concurrency. Frequent flushes cause small synchronous I/O, limiting performance. Poor modularity -- RDB must control operations in the KV layer.
+- /Passive/: Flush flag. This is KV item where the key is a magic number, and the value is a vector of column family, transaction sequence number, first LSN, and last LSN. Parallel to TiKV - applied index. So if flush flag in $CF_i$ contains transaction $j$, we can conclude that transactions up to $j-1$ have been persisted in $CF_i$, and transaction $j$ may have been partially persisted.
+
+Advantages of the flush flag solution:
+- Good modularity
+- Minimize intrusive changes. Only storing one extra key.
+- Do not need to prematurely flush unfull memory buffers.
+
+*** Reconstruction LSNs
+The LSN should be a monotonically increasing number. KV items are always given unique LSNs, and a larger LSN indicates more recent data. The flush flag contains the LSNs of the first KV and last persisted KV of the transaction, so we can recover LSNs. 
+
+
+
+* Sources
+"Removing Double-Logging with Passive Data Persistence in LSM-tree based Relational Databases"

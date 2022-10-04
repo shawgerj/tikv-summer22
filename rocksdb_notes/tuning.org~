@@ -1,0 +1,15 @@
+* Tuning
+** SSD vs HDD
+LSM-trees are a good data structure for disk hard drives, because they eliminate random writes. Sequential writes are advantageous on SSDs as well, because of block erase, but naively using an LSM-tree on an SSD is inefficient because the high parallelism of the SSD is not exploited.
+
+SSDs have a multi-channel architecture.
+
+*** Level 0 triggers
+- kL0_Compaction_Trigger. Start compaction after this many L0 files are created.
+- kL0_SlowdownWritesTrigger. Sleep (1ms) each write after L0 files threshold reacher.
+- kL0_StopWritesTrigger. Stop all writes until background compaction completes. 
+
+** Sources
+- https://github.com/EighteenZi/rocksdb_wiki/blob/master/RocksDB-Tuning-Guide.md
+- https://github.com/facebook/rocksdb/wiki/Write-Stalls
+- "An Efficient Design and Implementation of LSM-Tree based Key-Value Store on Open-Channel SSD"

@@ -1,0 +1,8 @@
+TODO
+
+- In gorocksdb, add DisableWal() in options.go
+- Where is INSERT_ERROR coming from?
+- Double check other configuration parameters against randomfill setup
+- Why is ycsb much slower? Double check how it is running the db inserts
+- Run benchmarks for load workload A
+- If there is time, run workload A (50/50) also

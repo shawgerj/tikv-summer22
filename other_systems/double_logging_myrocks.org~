@@ -1,0 +1,32 @@
+* Introduction
+Relational databases, which classically use a B-tree based storage engine, are shifting to other storage engines, such as LSM based storage engines. Why?
+- Internet services often have very write intensive workloads (LSM advantage)
+- Simple and fixed schema
+- Systems are frequently using expensive flash storage, and storage space usage is important (is this really an advantage of LSM tree compared to B-tree?)
+
+Example: MyRocks from Facebook replaced InnoDB (traditional B-tree) with RocksDB (LSM tree).
+
+** Two layer structure
+*** RDB layer
+- Buffer pool management
+- Query optimization
+- SQL query processing
+- Transactions
+- Data recovery
+*** Storage engine layer
+- Reliably and efficiently store data in persistent storage
+- Some operations are redundant and unnecessary. E.g. logging
+
+** Double-logging problem
+A binlog is used in an RDB for crash recovery. After a crash, the binlog is replayed. The LSM tree engine has a WAL to record all KV updates. Writes to logs should be synchronous to protect data, but synchronously logging twice generates a significant amount of performance overhead in the critical path. (To my knowledge, TiKV doesn't actually require synchronous logging except for sensitive admin commands. And I'm not sure about the Raft log. Is MyRocks always synchronous?).
+
+They claim a 44.6% improvement in throughput with WAL disabled and all other default options remaining the same. Using LinkBench to generate SQL requests. 
+
+*** Aside: log-on-log problem
+Double-logging is not log-on-log. Log-on-log is, for example, running a log-structured file system on a flash FTL. There is a dependency between the two logs. See Jingpei Yang, Ned Plasson, Greg Gillis, Nisha Talagala, and Swaminathan Sundararaman. Don’t Stack Your Log On My Log. In Interactions of NVM/Flash with Operating Systems and Workloads (INFLOW), 2014.
+
+
+
+
+* Sources
+"Removing Double-Logging with Passive Data Persistence in LSM-tree based Relational Databases"

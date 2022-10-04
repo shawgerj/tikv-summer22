@@ -1,0 +1,5 @@
+TODO
+
+- Where is INSERT_ERROR coming from? See if it comes back?
+- Make sure all rocksdb options are actually being applied in db.go
+- Why is ycsb much slower? Double check how it is running the db inserts

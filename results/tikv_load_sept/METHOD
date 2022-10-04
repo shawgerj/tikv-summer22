@@ -1,0 +1,24 @@
+5-node setup on Cloudlab. 
+
+Load YCSB workload A using go-ycsb. 30 million records. Key sizes 64-2048.
+
+Initial run: keys 1024-2048 not usable because run on different days at different
+times. The system performance was too variable.
+  First day: 7553 ops/sec, 9908 average latency
+  Second day: 4207 ops/sec, 15414 average latency
+
+Example script
+
+#!/bin/bash
+
+ycsb_path="/mydata2/go-ycsb"
+
+${ycsb_path}/bin/go-ycsb load tikv -P "${ycsb_path}/workloads/workloada512" \
+                -p tikv.pd="10.10.1.2:2379" \
+                -p tikv.type="raw" \
+                -p threadcount=160
+
+QUESTION
+Throughput drops continually throughout the experiment. Does throughput depend on the
+size of the database, or is there a stall factor here? Would a 50% write workload
+exhibit the same characteristic, if the system is under less compaction pressure? 

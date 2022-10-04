@@ -1,0 +1,305 @@
+%PDF-1.7
+1 0 obj <</Type /Catalog /Pages 2 0 R>> endobj
+2 0 obj <</Type /Pages /Kids [3 0 R] /Count 1>> endobj
+3 0 obj <</Type /Page /MediaBox [0 0 468 360] /Parent 2 0 R /Resources 4 0 R /Contents 19 0 R>> endobj
+4 0 obj <</Font <</F1 5 0 R /F2 6 0 R /F3 7 0 R /F4 8 0 R /F5 9 0 R /F6 10 0 R /F7 11 0 R /F8 12 0 R /F9 13 0 R /F10 14 0 R /F11 15 0 R /F12 16 0 R /F13 17 0 R /F14 18 0 R >>>> endobj
+5 0 obj <</Type /Font /Subtype /Type1 /BaseFont /Courier-Bold>> endobj
+6 0 obj <</Type /Font /Subtype /Type1 /BaseFont /Courier-BoldOblique>> endobj
+7 0 obj <</Type /Font /Subtype /Type1 /BaseFont /Courier-Oblique>> endobj
+8 0 obj <</Type /Font /Subtype /Type1 /BaseFont /Courier>> endobj
+9 0 obj <</Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold>> endobj
+10 0 obj <</Type /Font /Subtype /Type1 /BaseFont /Helvetica-BoldOblique>> endobj
+11 0 obj <</Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique>> endobj
+12 0 obj <</Type /Font /Subtype /Type1 /BaseFont /Helvetica>> endobj
+13 0 obj <</Type /Font /Subtype /Type1 /BaseFont /Symbol>> endobj
+14 0 obj <</Type /Font /Subtype /Type1 /BaseFont /Times-Bold>> endobj
+15 0 obj <</Type /Font /Subtype /Type1 /BaseFont /Times-BoldItalic>> endobj
+16 0 obj <</Type /Font /Subtype /Type1 /BaseFont /Times-Italic>> endobj
+17 0 obj <</Type /Font /Subtype /Type1 /BaseFont /Times-Roman>> endobj
+18 0 obj <</Type /Font /Subtype /Type1 /BaseFont /ZapfDingbats>> endobj
+19 0 obj <</Length 2355>>
+stream
+q
+1.00 w
+42.70 43.20 m
+454.10 43.20 l
+S
+Q
+q
+1.00 w
+43.20 39.20 m
+43.20 43.20 l
+S
+Q
+q
+1.00 w
+125.28 39.20 m
+125.28 43.20 l
+S
+Q
+q
+1.00 w
+207.36 39.20 m
+207.36 43.20 l
+S
+Q
+q
+1.00 w
+289.44 39.20 m
+289.44 43.20 l
+S
+Q
+q
+1.00 w
+371.52 39.20 m
+371.52 43.20 l
+S
+Q
+q
+1.00 w
+453.60 39.20 m
+453.60 43.20 l
+S
+Q
+BT
+/F8 10.00 Tf
+37.64 29.00 Td
+(64) Tj
+ET
+BT
+/F8 10.00 Tf
+116.94 29.00 Td
+(128) Tj
+ET
+BT
+/F8 10.00 Tf
+199.02 29.00 Td
+(256) Tj
+ET
+BT
+/F8 10.00 Tf
+281.10 29.00 Td
+(512) Tj
+ET
+BT
+/F8 10.00 Tf
+360.40 29.00 Td
+(1024) Tj
+ET
+BT
+/F8 10.00 Tf
+442.48 29.00 Td
+(2048) Tj
+ET
+BT
+/F8 10.00 Tf
+139.46 338.70 Td
+(RocksDB YCSB Load A - Latency Avg. and 99\%) Tj
+ET
+BT
+/F8 10.00 Tf
+208.11 16.00 Td
+(Value size (Bytes)) Tj
+ET
+q
+1.00 w
+43.20 42.70 m
+43.20 331.70 l
+S
+Q
+q
+1.00 w
+39.20 43.20 m
+43.20 43.20 l
+S
+Q
+q
+1.00 w
+39.20 93.07 m
+43.20 93.07 l
+S
+Q
+q
+1.00 w
+39.20 142.93 m
+43.20 142.93 l
+S
+Q
+q
+1.00 w
+39.20 192.80 m
+43.20 192.80 l
+S
+Q
+q
+1.00 w
+39.20 242.67 m
+43.20 242.67 l
+S
+Q
+q
+1.00 w
+39.20 292.53 m
+43.20 292.53 l
+S
+Q
+BT
+/F8 10.00 Tf
+30.64 39.60 Td
+(1) Tj
+ET
+BT
+/F8 10.00 Tf
+30.64 89.47 Td
+(4) Tj
+ET
+BT
+/F8 10.00 Tf
+25.08 139.33 Td
+(16) Tj
+ET
+BT
+/F8 10.00 Tf
+25.08 189.20 Td
+(64) Tj
+ET
+BT
+/F8 10.00 Tf
+19.52 239.07 Td
+(256) Tj
+ET
+BT
+/F8 10.00 Tf
+13.96 288.93 Td
+(1024) Tj
+ET
+BT
+/F8 10.00 Tf
+0.00 1.00 -1.00 0.00 10.96 159.69 Tm
+(Latency (us)) Tj
+ET
+q
+1.00 0.00 0.00  RG
+1.00 w
+43.20 113.20 m
+125.28 113.20 l
+207.36 113.20 l
+289.44 122.24 l
+371.52 135.46 l
+453.60 152.72 l
+S
+Q
+q
+0.00 0.00 1.00  RG
+1.00 w
+43.20 82.72 m
+125.28 82.72 l
+207.36 82.72 l
+289.44 93.07 l
+371.52 113.20 l
+453.60 138.13 l
+S
+Q
+q
+1.00 0.00 0.00  RG
+1.00 w
+[2 2 ] 0 d
+43.20 242.95 m
+125.28 244.72 l
+207.36 246.40 l
+289.44 253.09 l
+371.52 296.90 l
+453.60 298.00 l
+S
+Q
+q
+0.00 0.00 1.00  RG
+1.00 w
+[2 2 ] 0 d
+43.20 241.96 m
+125.28 245.11 l
+207.36 244.45 l
+289.44 294.45 l
+371.52 296.43 l
+453.60 296.96 l
+S
+Q
+q
+1.00 0.00 0.00  RG
+1.00 w
+353.57 242.67 m
+368.57 242.67 l
+S
+Q
+BT
+/F8 10.00 Tf
+372.57 239.07 Td
+(RocksDB) Tj
+ET
+q
+0.00 0.00 1.00  RG
+1.00 w
+353.57 224.67 m
+368.57 224.67 l
+S
+Q
+BT
+/F8 10.00 Tf
+372.57 221.07 Td
+(RocksDB-NoWAL) Tj
+ET
+q
+1.00 0.00 0.00  RG
+1.00 w
+[2 2 ] 0 d
+353.57 206.67 m
+368.57 206.67 l
+S
+Q
+BT
+/F8 10.00 Tf
+372.57 203.07 Td
+(99\% latency) Tj
+ET
+q
+0.00 0.00 1.00  RG
+1.00 w
+[2 2 ] 0 d
+353.57 188.67 m
+368.57 188.67 l
+S
+Q
+BT
+/F8 10.00 Tf
+372.57 185.07 Td
+(99\% latency NoWAL) Tj
+ET
+endstream
+endobj
+xref
+0 20
+0000000000 65535 f
+0000000009 00000 n
+0000000056 00000 n
+0000000111 00000 n
+0000000214 00000 n
+0000000398 00000 n
+0000000469 00000 n
+0000000547 00000 n
+0000000621 00000 n
+0000000687 00000 n
+0000000760 00000 n
+0000000841 00000 n
+0000000918 00000 n
+0000000987 00000 n
+0000001053 00000 n
+0000001123 00000 n
+0000001199 00000 n
+0000001271 00000 n
+0000001342 00000 n
+0000001414 00000 n
+0000003819 00000 n
+trailer <</Size 20/Root 1 0 R>>
+startxref
+4270
+%%EOF

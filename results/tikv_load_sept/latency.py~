@@ -1,0 +1,30 @@
+import sys
+from zplot import *
+
+ctype = 'pdf' if len(sys.argv) < 2 else sys.argv[1]
+c = canvas(ctype, title='tikv-ycsb-load-a-latency', dimensions=['6.5in', '5in'])
+
+t_tikv_default = table(file='./tikv_128b_load_default')
+t_tikv_nowal = table(file='./tikv_128b_load_nowal')
+t_tikv_noflush = table(file='./tikv_128b_load_noflush')
+
+d = drawable(canvas=c, xrange=[0, 4], yrange=[0, 3300], xscale='linear', yscale='linear',
+             coord=['0.6in', '0.6in'], dimensions=['5.7in', '4in'])
+
+axis(drawable=d, title='TiKV YCSB Load A - Write Latency (128B values)', style='x', xtitle='Method',
+     xmanual=[['TiKV', 1], ['TiKV-NoWAL', 2], ['TiKV-NoFlush', 3]])
+
+axis(drawable=d, ytitle='Write latency (us)', style='y', yauto=['','',300])
+
+p = plotter()
+L = legend()
+
+# operations per second
+p.verticalbars(drawable=d, table=t_tikv_default, xfield='pos', 
+               yfield='avg_write_us', fill=True,  fillcolor='red', barwidth='0.8')
+p.verticalbars(drawable=d, table=t_tikv_nowal, xfield='pos', 
+               yfield='avg_write_us', fill=True, fillcolor='blue', barwidth='0.8')
+p.verticalbars(drawable=d, table=t_tikv_noflush, xfield='pos', 
+               yfield='avg_write_us', fill=True, fillcolor='green', barwidth='0.8')
+
+c.render()

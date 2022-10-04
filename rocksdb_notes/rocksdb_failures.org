@@ -1,0 +1,60 @@
+* RocksDB Failures
+I am considering RocksDB durability, but have a vague notion of what types of failures RocksDB may encounter that cause it to lose data. Here's an investigation.
+
+** Power failure
+
+** Background errors
+Possible outcomes of write operation errors (write to WAL, memtable flush, background compaction): database reverts to read-only mode. The default value of =paranoid_checks= is =true=. TiKV doesn't appear to change this.
+
+| BackgroundErrorReason | Set where?                                   |
+|-----------------------+----------------------------------------------|
+| kWriteCallback        | db_impl_write.cc:WriteStatusCheck()          |
+| kMemTable             | db_impl_write.cc:MemTableInsertStatusCheck(), SwitchMemtable() |
+| kFlush                | SyncClosedLogs(). Sync or Close log file bad status. Max space reached. AtomicFlushMemTalesToOutputFiles |
+
+*** MemTableInsertStatusCheck()
+From comments: "A non-OK status here indicates that the state implied by the WAL has diverged from the in-memory state." So can this ever be set if we don't use a WAL? Most of the cases here return a =Status::Corruption= if there is a malformed write command.
+
+*** How does TiKV handle RocksDB =bg_error_=?
+Look in =engine_rocks/event_listener.rs=. =on_background_error()=. TiKV lets RocksDB automatically recover if it is a flush or compaction error due to lack of disk space (does automatic recovery depend on WAL?). If it is a corruption error, "avoid tikv from restarting" by using =set_panic_mark()=. Call =panic!=.
+
+*** RocksDB in TiKV
+- Process or thread?
+- What happens after a panic? Comment in code says "avoid tikv from restarting", so does it try to restart RocksDB by itself? No! When the panic mark is set, TiKV creates a "panic mark file" before it exits. If this file is detected upon startup, TiKV will print an error message and refuse to start.
+
+The panic mark is set if there is a corruption error in RocksDB, it can't iterate over a range of keys, it can't get the value for a snapshot, or there is an unrecoverable FileDictionary error (something to do with encryption... I don't know). Mainly, unrecoverable RocksDB errors prevent TiKV from restarting. 
+
+**** =set_panic_mark()=
+=PANIC_MARK= is an atomic bool. Set it to =true=. 
+
+*** TiKV =panic!=
+Ways of exiting...
+**** =process::abort()=
+This is called if the option =abort_on_panic= is true (by default it is false). Rust docs https://doc.rust-lang.org/std/process/fn.abort.html
+
+#+begin_example
+Terminates the process in an abnormal fashion.
+
+The function will never return and will immediately terminate the current process in a platform specific “abnormal” manner.
+
+Note that because this function never returns, and that it terminates the process, no destructors on the current stack or any other thread’s stack will be run.
+#+end_example
+
+**** =process::exit()=
+
+**** =libc::_exit(1)=
+There is a difference between libc =exit()= and =_exit()=. See https://www.gnu.org/software/libc/manual/html_mono/libc.html.
+
+=exit()= takes the following actions before terminating the program (from manual):
+- Functions that were registered with the =atexit= or =on_exit= functions are called in the reverse order of their registration. This mechanism allows your application to specify its own “cleanup” actions to be performed at program termination. Typically, this is used to do things like saving program state information in a file, or unlocking locks in shared data bases.
+- All open streams are closed, writing out any buffered output data. See Closing Streams. In addition, temporary files opened with the tmpfile function are removed; see Temporary Files.
+- _exit is called, terminating the program. See Termination Internals.
+
+When there is a panic, TiKV uses =libc::_exit(1)= to avoid any cleanup process. 
+
+** Modifying the event listener
+Idea: in the testing framework, use a custom event listener to detect RocksDB background errors and reboot the test node.
+
+There is a comment in =test_raftstore/src/cluster.rs= -- "FIXME: rocksdb event listeners may not work, because we change the router."
+
+What is different about the router?

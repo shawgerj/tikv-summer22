@@ -1,2 +1,0 @@
-INSERT - Takes(s): 102.6, Count: 49495, OPS: 482.3, Avg(us): 14204, Min(us): 5236, Max(us): 56871, 99th(us): 25000, 99.9th(us): 32000, 99.99th(us): 53000
-READ   - Takes(s): 102.6, Count: 950504, OPS: 9260.6, Avg(us): 3539, Min(us): 639, Max(us): 96885, 99th(us): 13000, 99.9th(us): 20000, 99.99th(us): 55000

@@ -1,0 +1,305 @@
+%PDF-1.7
+1 0 obj <</Type /Catalog /Pages 2 0 R>> endobj
+2 0 obj <</Type /Pages /Kids [3 0 R] /Count 1>> endobj
+3 0 obj <</Type /Page /MediaBox [0 0 468 360] /Parent 2 0 R /Resources 4 0 R /Contents 19 0 R>> endobj
+4 0 obj <</Font <</F1 5 0 R /F2 6 0 R /F3 7 0 R /F4 8 0 R /F5 9 0 R /F6 10 0 R /F7 11 0 R /F8 12 0 R /F9 13 0 R /F10 14 0 R /F11 15 0 R /F12 16 0 R /F13 17 0 R /F14 18 0 R >>>> endobj
+5 0 obj <</Type /Font /Subtype /Type1 /BaseFont /Courier-Bold>> endobj
+6 0 obj <</Type /Font /Subtype /Type1 /BaseFont /Courier-BoldOblique>> endobj
+7 0 obj <</Type /Font /Subtype /Type1 /BaseFont /Courier-Oblique>> endobj
+8 0 obj <</Type /Font /Subtype /Type1 /BaseFont /Courier>> endobj
+9 0 obj <</Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold>> endobj
+10 0 obj <</Type /Font /Subtype /Type1 /BaseFont /Helvetica-BoldOblique>> endobj
+11 0 obj <</Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique>> endobj
+12 0 obj <</Type /Font /Subtype /Type1 /BaseFont /Helvetica>> endobj
+13 0 obj <</Type /Font /Subtype /Type1 /BaseFont /Symbol>> endobj
+14 0 obj <</Type /Font /Subtype /Type1 /BaseFont /Times-Bold>> endobj
+15 0 obj <</Type /Font /Subtype /Type1 /BaseFont /Times-BoldItalic>> endobj
+16 0 obj <</Type /Font /Subtype /Type1 /BaseFont /Times-Italic>> endobj
+17 0 obj <</Type /Font /Subtype /Type1 /BaseFont /Times-Roman>> endobj
+18 0 obj <</Type /Font /Subtype /Type1 /BaseFont /ZapfDingbats>> endobj
+19 0 obj <</Length 2340>>
+stream
+q
+1.00 w
+42.70 43.20 m
+454.10 43.20 l
+S
+Q
+q
+1.00 w
+43.20 39.20 m
+43.20 43.20 l
+S
+Q
+q
+1.00 w
+125.28 39.20 m
+125.28 43.20 l
+S
+Q
+q
+1.00 w
+207.36 39.20 m
+207.36 43.20 l
+S
+Q
+q
+1.00 w
+289.44 39.20 m
+289.44 43.20 l
+S
+Q
+q
+1.00 w
+371.52 39.20 m
+371.52 43.20 l
+S
+Q
+q
+1.00 w
+453.60 39.20 m
+453.60 43.20 l
+S
+Q
+BT
+/F8 10.00 Tf
+37.64 29.00 Td
+(64) Tj
+ET
+BT
+/F8 10.00 Tf
+116.94 29.00 Td
+(128) Tj
+ET
+BT
+/F8 10.00 Tf
+199.02 29.00 Td
+(256) Tj
+ET
+BT
+/F8 10.00 Tf
+281.10 29.00 Td
+(512) Tj
+ET
+BT
+/F8 10.00 Tf
+360.40 29.00 Td
+(1024) Tj
+ET
+BT
+/F8 10.00 Tf
+442.48 29.00 Td
+(2048) Tj
+ET
+BT
+/F8 10.00 Tf
+161.43 338.70 Td
+(RocksDB randomfill - Latency 7200rpm) Tj
+ET
+BT
+/F8 10.00 Tf
+208.11 16.00 Td
+(Value size (Bytes)) Tj
+ET
+q
+1.00 w
+43.20 42.70 m
+43.20 331.70 l
+S
+Q
+q
+1.00 w
+39.20 43.20 m
+43.20 43.20 l
+S
+Q
+q
+1.00 w
+39.20 93.07 m
+43.20 93.07 l
+S
+Q
+q
+1.00 w
+39.20 142.93 m
+43.20 142.93 l
+S
+Q
+q
+1.00 w
+39.20 192.80 m
+43.20 192.80 l
+S
+Q
+q
+1.00 w
+39.20 242.67 m
+43.20 242.67 l
+S
+Q
+q
+1.00 w
+39.20 292.53 m
+43.20 292.53 l
+S
+Q
+BT
+/F8 10.00 Tf
+30.64 39.60 Td
+(1) Tj
+ET
+BT
+/F8 10.00 Tf
+30.64 89.47 Td
+(4) Tj
+ET
+BT
+/F8 10.00 Tf
+25.08 139.33 Td
+(16) Tj
+ET
+BT
+/F8 10.00 Tf
+25.08 189.20 Td
+(64) Tj
+ET
+BT
+/F8 10.00 Tf
+19.52 239.07 Td
+(256) Tj
+ET
+BT
+/F8 10.00 Tf
+13.96 288.93 Td
+(1024) Tj
+ET
+BT
+/F8 10.00 Tf
+0.00 1.00 -1.00 0.00 10.96 159.69 Tm
+(Latency (us)) Tj
+ET
+q
+1.00 0.00 0.00  RG
+1.00 w
+43.20 93.37 m
+125.28 92.87 l
+207.36 98.43 l
+289.44 126.51 l
+371.52 151.09 l
+453.60 180.70 l
+S
+Q
+q
+0.00 0.00 1.00  RG
+1.00 w
+43.20 68.79 m
+125.28 67.06 l
+207.36 99.39 l
+289.44 118.39 l
+371.52 152.83 l
+453.60 177.27 l
+S
+Q
+q
+1.00 0.00 0.00  RG
+1.00 w
+[2 2 ] 0 d
+43.20 205.32 m
+125.28 205.59 l
+207.36 295.94 l
+289.44 300.77 l
+371.52 301.01 l
+453.60 329.65 l
+S
+Q
+q
+0.00 0.00 1.00  RG
+1.00 w
+[2 2 ] 0 d
+43.20 154.37 m
+125.28 169.83 l
+207.36 300.60 l
+289.44 300.80 l
+371.52 301.03 l
+453.60 301.09 l
+S
+Q
+q
+1.00 0.00 0.00  RG
+1.00 w
+356.24 126.03 m
+371.24 126.03 l
+S
+Q
+BT
+/F8 10.00 Tf
+375.24 122.43 Td
+(RocksDB) Tj
+ET
+q
+0.00 0.00 1.00  RG
+1.00 w
+356.24 108.03 m
+371.24 108.03 l
+S
+Q
+BT
+/F8 10.00 Tf
+375.24 104.43 Td
+(RocksDB-NoWAL) Tj
+ET
+q
+1.00 0.00 0.00  RG
+1.00 w
+[2 2 ] 0 d
+356.24 90.03 m
+371.24 90.03 l
+S
+Q
+BT
+/F8 10.00 Tf
+375.24 86.43 Td
+(99\% latency) Tj
+ET
+q
+0.00 0.00 1.00  RG
+1.00 w
+[2 2 ] 0 d
+356.24 72.03 m
+371.24 72.03 l
+S
+Q
+BT
+/F8 10.00 Tf
+375.24 68.43 Td
+(99\% latency NoWAL) Tj
+ET
+endstream
+endobj
+xref
+0 20
+0000000000 65535 f
+0000000009 00000 n
+0000000056 00000 n
+0000000111 00000 n
+0000000214 00000 n
+0000000398 00000 n
+0000000469 00000 n
+0000000547 00000 n
+0000000621 00000 n
+0000000687 00000 n
+0000000760 00000 n
+0000000841 00000 n
+0000000918 00000 n
+0000000987 00000 n
+0000001053 00000 n
+0000001123 00000 n
+0000001199 00000 n
+0000001271 00000 n
+0000001342 00000 n
+0000001414 00000 n
+0000003804 00000 n
+trailer <</Size 20/Root 1 0 R>>
+startxref
+4255
+%%EOF

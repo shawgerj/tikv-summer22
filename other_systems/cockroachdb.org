@@ -1,0 +1,11 @@
+* CockroachDB
+Cockroach was build on top of RocksDB. There was a proposal for a very similar project to mine https://github.com/cockroachdb/cockroach/issues/38322.
+
+** Pebble
+CockroachDB replaced RocksDB with Pebble https://www.cockroachlabs.com/blog/pebble-rocksdb-kv-store/.
+
+They have an interesting write-up of differences between Pebble and RocksDB here https://github.com/cockroachdb/pebble/blob/master/docs/rocksdb.md.
+
+Stuff to look at, probably read the code too:
+- commit path. How does this change assuming no WAL? What about raft commit? Is this in raft-rs? I don't have a great understanding of how frequently the raft implementation is doing its writes to RocksDB.
+- IO limiter. Tuning opportunity? Flushes and compactions use the same rate limiter. What is it set to? Should this depend on the performance of the underlying hardware? Maybe worth experimenting with YCSB and vanilla RocksDB to see if disabling WAL and adjusting IO rate affects performance. 

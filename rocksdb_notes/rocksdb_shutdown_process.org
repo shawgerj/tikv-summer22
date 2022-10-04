@@ -1,0 +1,34 @@
+* RocksDB shutdown process
+
+To simulate failure in RocksDB, I have added a flag called =fail-on-write=, which prevents RocksDB from writing un-WALed memtable data to disk on shutdown. RocksDB typically uses =has_unpersisted_data= to determine if the memtable should be flushed on shutdown, I disable this.
+
+A few weeks ago, Andrea suggested I make sure RocksDB isn't doing any other special clean-up on shutdown. Here's an investigation of the RocksDB shutdown process.
+
+** Starting Point: =DBImpl= deconstructor calls =CloseHelper()=
+=CloseHelper()= does all the shutdown work when the database is closed. The database is closed when the deconstructor runs, which happens automatically when the reference to the database goes out of scope in rust.
+
+** Background Error Recovery
+*** What types of background errors are there?
+- Background compaction
+- Background flush
+- Write
+
+Each error has a "reason" and a "code". For example, reasons could be =kCompaction=, =kFlush=, =kWriteCallback=. Codes could be =kCorruption=, =kIOError=.
+
+I think the event handler in TiKV is listening for these types of errors? Double check! =EventHelpers::NotifyOnBackgroundError=.
+
+*** How does =CancelErrorRecovery()= work?
+*** How does it know if there is a recovery in progress?
+
+** =CancelAllBackgroundWork(bool)=
+
+*** bool arg
+If true, call =WaitForBackgroundWork()=, otherwise just return. =CancelAllBackgroundWork= is called with =false=. Is it ever called with =true=?
+
+** Wait for background work to finish
+
+** Clean up obsolete files and implications for =RepairDB()=
+
+** Table cache
+
+** 

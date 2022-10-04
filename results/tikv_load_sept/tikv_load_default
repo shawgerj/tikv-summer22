@@ -1,0 +1,5 @@
+#	value_size	throughput_ops	avg_write_us	p99_write_us
+64  42043       3538            8647
+128 34888       4130            12191
+256 25181       5402            22863
+512 14232       9078            50303

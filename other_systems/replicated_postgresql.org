@@ -1,0 +1,15 @@
+* Replicated PostgreSQL
+There is a master and standby server. PostgreSQL does not use heartbeats or other software solutions to notify the standby that the master has failed. Rather, it depends on third party monitoring solutions. (???)
+
+** Strategies for replication
+*** File or disk based
+- Shared disk used by multiple servers.
+- Distributed replicated block device. Replicated storage system
+
+*** Log shipping or WAL
+The WAL is 16MB segments. Each segment has multiple records, and records are pointed to by log sequence numbers. Sometimes WAL is called XLOGS in PostgreSQL.
+
+There is a window for data loss, if the primary fails before the latest log updates have been shipped.
+
+** Take-away
+In a brief look, it seems that postgresql does not use a consensus log for replication. 

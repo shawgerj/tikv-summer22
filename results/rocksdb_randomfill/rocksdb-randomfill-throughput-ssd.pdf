@@ -1,0 +1,515 @@
+%PDF-1.7
+1 0 obj <</Type /Catalog /Pages 2 0 R>> endobj
+2 0 obj <</Type /Pages /Kids [3 0 R] /Count 1>> endobj
+3 0 obj <</Type /Page /MediaBox [0 0 468 360] /Parent 2 0 R /Resources 4 0 R /Contents 19 0 R>> endobj
+4 0 obj <</Font <</F1 5 0 R /F2 6 0 R /F3 7 0 R /F4 8 0 R /F5 9 0 R /F6 10 0 R /F7 11 0 R /F8 12 0 R /F9 13 0 R /F10 14 0 R /F11 15 0 R /F12 16 0 R /F13 17 0 R /F14 18 0 R >>>> endobj
+5 0 obj <</Type /Font /Subtype /Type1 /BaseFont /Courier-Bold>> endobj
+6 0 obj <</Type /Font /Subtype /Type1 /BaseFont /Courier-BoldOblique>> endobj
+7 0 obj <</Type /Font /Subtype /Type1 /BaseFont /Courier-Oblique>> endobj
+8 0 obj <</Type /Font /Subtype /Type1 /BaseFont /Courier>> endobj
+9 0 obj <</Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold>> endobj
+10 0 obj <</Type /Font /Subtype /Type1 /BaseFont /Helvetica-BoldOblique>> endobj
+11 0 obj <</Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique>> endobj
+12 0 obj <</Type /Font /Subtype /Type1 /BaseFont /Helvetica>> endobj
+13 0 obj <</Type /Font /Subtype /Type1 /BaseFont /Symbol>> endobj
+14 0 obj <</Type /Font /Subtype /Type1 /BaseFont /Times-Bold>> endobj
+15 0 obj <</Type /Font /Subtype /Type1 /BaseFont /Times-BoldItalic>> endobj
+16 0 obj <</Type /Font /Subtype /Type1 /BaseFont /Times-Italic>> endobj
+17 0 obj <</Type /Font /Subtype /Type1 /BaseFont /Times-Roman>> endobj
+18 0 obj <</Type /Font /Subtype /Type1 /BaseFont /ZapfDingbats>> endobj
+19 0 obj <</Length 4064>>
+stream
+q
+1.00 w
+42.70 43.20 m
+454.10 43.20 l
+S
+Q
+q
+1.00 w
+43.20 39.20 m
+43.20 43.20 l
+S
+Q
+q
+1.00 w
+125.28 39.20 m
+125.28 43.20 l
+S
+Q
+q
+1.00 w
+207.36 39.20 m
+207.36 43.20 l
+S
+Q
+q
+1.00 w
+289.44 39.20 m
+289.44 43.20 l
+S
+Q
+q
+1.00 w
+371.52 39.20 m
+371.52 43.20 l
+S
+Q
+q
+1.00 w
+453.60 39.20 m
+453.60 43.20 l
+S
+Q
+BT
+/F8 10.00 Tf
+37.64 29.00 Td
+(64) Tj
+ET
+BT
+/F8 10.00 Tf
+116.94 29.00 Td
+(128) Tj
+ET
+BT
+/F8 10.00 Tf
+199.02 29.00 Td
+(256) Tj
+ET
+BT
+/F8 10.00 Tf
+281.10 29.00 Td
+(512) Tj
+ET
+BT
+/F8 10.00 Tf
+360.40 29.00 Td
+(1024) Tj
+ET
+BT
+/F8 10.00 Tf
+442.48 29.00 Td
+(2048) Tj
+ET
+BT
+/F8 10.00 Tf
+115.02 338.70 Td
+(RocksDB randomfill - Throughput and Stall Percentage SSD) Tj
+ET
+BT
+/F8 10.00 Tf
+208.11 16.00 Td
+(Value size (Bytes)) Tj
+ET
+q
+1.00 w
+43.20 42.70 m
+43.20 331.70 l
+S
+Q
+q
+1.00 w
+39.20 43.20 m
+43.20 43.20 l
+S
+Q
+q
+1.00 w
+39.20 65.35 m
+43.20 65.35 l
+S
+Q
+q
+1.00 w
+39.20 87.51 m
+43.20 87.51 l
+S
+Q
+q
+1.00 w
+39.20 109.66 m
+43.20 109.66 l
+S
+Q
+q
+1.00 w
+39.20 131.82 m
+43.20 131.82 l
+S
+Q
+q
+1.00 w
+39.20 153.97 m
+43.20 153.97 l
+S
+Q
+q
+1.00 w
+39.20 176.12 m
+43.20 176.12 l
+S
+Q
+q
+1.00 w
+39.20 198.28 m
+43.20 198.28 l
+S
+Q
+q
+1.00 w
+39.20 220.43 m
+43.20 220.43 l
+S
+Q
+q
+1.00 w
+39.20 242.58 m
+43.20 242.58 l
+S
+Q
+q
+1.00 w
+39.20 264.74 m
+43.20 264.74 l
+S
+Q
+q
+1.00 w
+39.20 286.89 m
+43.20 286.89 l
+S
+Q
+q
+1.00 w
+39.20 309.05 m
+43.20 309.05 l
+S
+Q
+q
+1.00 w
+39.20 331.20 m
+43.20 331.20 l
+S
+Q
+BT
+/F8 10.00 Tf
+30.64 39.60 Td
+(0) Tj
+ET
+BT
+/F8 10.00 Tf
+25.08 61.75 Td
+(40) Tj
+ET
+BT
+/F8 10.00 Tf
+25.08 83.91 Td
+(80) Tj
+ET
+BT
+/F8 10.00 Tf
+19.52 106.06 Td
+(120) Tj
+ET
+BT
+/F8 10.00 Tf
+19.52 128.22 Td
+(160) Tj
+ET
+BT
+/F8 10.00 Tf
+19.52 150.37 Td
+(200) Tj
+ET
+BT
+/F8 10.00 Tf
+19.52 172.52 Td
+(240) Tj
+ET
+BT
+/F8 10.00 Tf
+19.52 194.68 Td
+(280) Tj
+ET
+BT
+/F8 10.00 Tf
+19.52 216.83 Td
+(320) Tj
+ET
+BT
+/F8 10.00 Tf
+19.52 238.98 Td
+(360) Tj
+ET
+BT
+/F8 10.00 Tf
+19.52 261.14 Td
+(400) Tj
+ET
+BT
+/F8 10.00 Tf
+19.52 283.29 Td
+(440) Tj
+ET
+BT
+/F8 10.00 Tf
+19.52 305.45 Td
+(480) Tj
+ET
+BT
+/F8 10.00 Tf
+19.52 327.60 Td
+(520) Tj
+ET
+BT
+/F8 10.00 Tf
+0.00 1.00 -1.00 0.00 16.52 133.56 Tm
+(Throughput (Kops / sec)) Tj
+ET
+q
+1.00 w
+[2 2 ] 0 d
+453.60 42.70 m
+453.60 331.70 l
+S
+Q
+q
+1.00 w
+449.60 72.00 m
+453.60 72.00 l
+S
+Q
+q
+1.00 w
+449.60 100.80 m
+453.60 100.80 l
+S
+Q
+q
+1.00 w
+449.60 129.60 m
+453.60 129.60 l
+S
+Q
+q
+1.00 w
+449.60 158.40 m
+453.60 158.40 l
+S
+Q
+q
+1.00 w
+449.60 187.20 m
+453.60 187.20 l
+S
+Q
+q
+1.00 w
+449.60 216.00 m
+453.60 216.00 l
+S
+Q
+q
+1.00 w
+449.60 244.80 m
+453.60 244.80 l
+S
+Q
+q
+1.00 w
+449.60 273.60 m
+453.60 273.60 l
+S
+Q
+q
+1.00 w
+449.60 302.40 m
+453.60 302.40 l
+S
+Q
+q
+1.00 w
+449.60 331.20 m
+453.60 331.20 l
+S
+Q
+BT
+/F8 10.00 Tf
+435.48 68.40 Td
+(10) Tj
+ET
+BT
+/F8 10.00 Tf
+435.48 97.20 Td
+(20) Tj
+ET
+BT
+/F8 10.00 Tf
+435.48 126.00 Td
+(30) Tj
+ET
+BT
+/F8 10.00 Tf
+435.48 154.80 Td
+(40) Tj
+ET
+BT
+/F8 10.00 Tf
+435.48 183.60 Td
+(50) Tj
+ET
+BT
+/F8 10.00 Tf
+435.48 212.40 Td
+(60) Tj
+ET
+BT
+/F8 10.00 Tf
+435.48 241.20 Td
+(70) Tj
+ET
+BT
+/F8 10.00 Tf
+435.48 270.00 Td
+(80) Tj
+ET
+BT
+/F8 10.00 Tf
+435.48 298.80 Td
+(90) Tj
+ET
+BT
+/F8 10.00 Tf
+429.92 327.60 Td
+(100) Tj
+ET
+BT
+/F8 10.00 Tf
+0.00 1.00 -1.00 0.00 426.92 150.51 Tm
+(Stall Percentage) Tj
+ET
+q
+1.00 0.00 0.00  RG
+1.00 w
+43.20 182.33 m
+125.28 183.24 l
+207.36 167.77 l
+289.44 107.46 l
+371.52 72.95 l
+453.60 58.08 l
+S
+Q
+q
+0.00 0.00 1.00  RG
+1.00 w
+43.20 306.62 m
+125.28 335.91 l
+207.36 196.27 l
+289.44 122.36 l
+371.52 74.72 l
+453.60 55.38 l
+S
+Q
+q
+1.00 0.00 0.00  RG
+1.00 w
+[2 2 ] 0 d
+43.20 43.20 m
+125.28 43.20 l
+207.36 59.04 l
+289.44 170.50 l
+371.52 239.04 l
+453.60 268.70 l
+S
+Q
+q
+0.00 0.00 1.00  RG
+1.00 w
+[2 2 ] 0 d
+43.20 48.67 m
+125.28 43.20 l
+207.36 157.82 l
+289.44 260.06 l
+371.52 295.78 l
+453.60 313.63 l
+S
+Q
+q
+1.00 0.00 0.00  RG
+1.00 w
+53.81 142.89 m
+68.81 142.89 l
+S
+Q
+BT
+/F8 10.00 Tf
+72.81 139.29 Td
+(RocksDB) Tj
+ET
+q
+0.00 0.00 1.00  RG
+1.00 w
+53.81 124.89 m
+68.81 124.89 l
+S
+Q
+BT
+/F8 10.00 Tf
+72.81 121.29 Td
+(RocksDB-NoWAL) Tj
+ET
+q
+1.00 0.00 0.00  RG
+1.00 w
+[2 2 ] 0 d
+53.81 106.89 m
+68.81 106.89 l
+S
+Q
+BT
+/F8 10.00 Tf
+72.81 103.29 Td
+(Stall\%) Tj
+ET
+q
+0.00 0.00 1.00  RG
+1.00 w
+[2 2 ] 0 d
+53.81 88.89 m
+68.81 88.89 l
+S
+Q
+BT
+/F8 10.00 Tf
+72.81 85.29 Td
+(Stall\%-NoWAL) Tj
+ET
+endstream
+endobj
+xref
+0 20
+0000000000 65535 f
+0000000009 00000 n
+0000000056 00000 n
+0000000111 00000 n
+0000000214 00000 n
+0000000398 00000 n
+0000000469 00000 n
+0000000547 00000 n
+0000000621 00000 n
+0000000687 00000 n
+0000000760 00000 n
+0000000841 00000 n
+0000000918 00000 n
+0000000987 00000 n
+0000001053 00000 n
+0000001123 00000 n
+0000001199 00000 n
+0000001271 00000 n
+0000001342 00000 n
+0000001414 00000 n
+0000005528 00000 n
+trailer <</Size 20/Root 1 0 R>>
+startxref
+5979
+%%EOF
