@@ -1,0 +1,23 @@
+Experiment performed on cloudlab xl170. 10 core, 20 thread. 64GB memory,
+480GB SSD disk. 25Gbps network. I specified that all 5 nodes should be on
+the same switch.
+
+Initially I ran go-ycsb with 200 threads. Performance was not increasing as
+much as I anticipated. I then ran 8 instances of go-ycsb with 20 threads each.
+There seemed to be higher usage of system resources with that setup, but I'm
+still not sure I have found maximum performance of the system.
+
+Modifications from the default TiKV
+- Disabled raft WAL. If we write values to a value log first, WAL is not
+  necessary (although they will be written to disk.. this isn't a completely
+  fair comparison)
+- Wrote a counter to the value part of KV-rocksdb to simulate writing a pointer
+  to the value log.
+
+Questions:
+1) Does go-ycsb need a new seed or something? Am I generating duplicate keys
+   with multiple instances running?
+2) CPU and memory usage on TiKV nodes does not seem very high. How to verify
+   that it is a disk bottleneck? iostat -x shows SSD usage at ~35%, even on 
+   the default version of TiKV. But rocksdb compaction will use more than 90%
+   of the CPU.
