@@ -8,13 +8,14 @@ pd_node = "10.10.1.2"
 tikv_nodes = ["10.10.1.3", "10.10.1.4", "10.10.1.5"]
 
 DB_SIZE = (32 * 1024 * 1024 * 1024) # 32GB
-executable = '/mydata2/go-ycsb/bin/go-ycsb'
-workload = '/mydata2/go-ycsb/workloads/workloada'
+NUM_BENCHES = 8
+executable = '/mydata/go-ycsb/bin/go-ycsb'
+workload = '/mydata/go-ycsb/workloads/workloada'
 
-run_pd_cmd = f'/mydata2/pd/bin/pd-server --name=\"pd\" --data-dir=\"/users/shawgerj/pd\" --client-urls=\"http://{pd_node}:2379\" --peer-urls=\"http://{pd_node}:2380\" --log-file=\"/users/shawgerj/pd.log\"'
+run_pd_cmd = f'/mydata/pd/bin/pd-server --name=\"pd\" --data-dir=\"/users/shawgerj/pd\" --client-urls=\"http://{pd_node}:2379\" --peer-urls=\"http://{pd_node}:2380\" --log-file=\"/users/shawgerj/pd.log\"'
 
 run_tikv_cmds = list(map(lambda n:
-                         f'/mydata2/tikv2/target/release/tikv-server --pd-endpoints=\"{pd_node}:2379\" --addr=\"{n}:20160\" --status-addr=\"{n}:20180\" --data-dir=\"/mydata2/tikv-data\" --log-file=\"/mydata2/tikv.log\"',
+                         f'/mydata/tikv2/target/release/tikv-server --pd-endpoints=\"{pd_node}:2379\" --addr=\"{n}:20160\" --status-addr=\"{n}:20180\" --data-dir=\"/mydata/tikv-data\" --log-file=\"/mydata/tikv.log\"',
                          tikv_nodes))
 
 # setup connections
@@ -24,9 +25,9 @@ tikv_cxns = list(map(lambda c: Connection(host=c,
                                           port=22),
                      tikv_nodes))
 
-# for values 1K through 32K
+# for values 512 through 16K
 # database size 32GB
-for i in range(7, 13):
+for i in range(6, 12):
 
     # ssh to pd node, run pd
     print("starting pd...")
@@ -44,32 +45,40 @@ for i in range(7, 13):
     fieldcount = 8
     fieldlength = pow(2, i)
     size = fieldcount * fieldlength
-    recordcount = int(DB_SIZE / size)
+    recordcount = int((DB_SIZE / size) / NUM_BENCHES)
     operationcount = 2000000
 
     print(f'running benchmark for values of size {size} and {recordcount} records')
 
     cmd = [executable, 'load', 'tikv', '-P', workload]
-    opts = ['tikv.pd=10.10.1.2:2379', 'tikv.type=raw', 'threadcount=200',
+    opts = ['tikv.pd=10.10.1.2:2379', 'tikv.type=raw', 'threadcount=20',
             f'fieldcount={fieldcount}', f'fieldlength={fieldlength}',
             f'operationcount={operationcount}', f'recordcount={recordcount}']
 
     for o in opts:
         cmd.extend(['-p', o])
-        
-    name_pre = 'load_a_'
-    print(cmd)
-    with open(f'{name_pre}{size}', 'w') as outfile:
-        # run cmd
-        subprocess.run(cmd, stdout=outfile)
+
+    ps = []
+    for i in range(0, NUM_BENCHES):
+        print(cmd)
+        with open(f'load_a_{size}_{i}', 'w') as outfile:
+            # run cmd
+            p = subprocess.Popen(cmd, stdout=outfile)
+            ps.append(p)
+
+    for p in ps:
+        p.wait()
 
     # shutdown tikv processes, clear dbs
+    # adding a bunch of waits because I was getting weird errors
+    time.sleep(5)
     print("closing tikv servers...")
     for c in tikv_cxns:
         c.run('killall tikv-server')
-        time.sleep(2)
-        c.run('rm /mydata2/tikv.log')
-        c.run('rm -r /mydata2/tikv-data')
+        time.sleep(10)
+        c.run('rm /mydata/tikv.log')
+        time.sleep(10)
+        c.run('rm -r /mydata/tikv-data')
 
 
     time.sleep(1)
